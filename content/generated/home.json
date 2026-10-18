@@ -242,30 +242,30 @@
     }
   ],
   "faq": [
-    [
-      "Is First Person Boxing a Roblox game?",
-      "Yes. First Person Boxing is a Roblox experience by Can You Box?. Follow the official Roblox game link on this page."
-    ],
-    [
-      "Where can I play First Person Boxing?",
-      "Use the original Roblox experience at Place ID 132956556682909. This guide does not run the game in your browser."
-    ],
-    [
-      "Does First Person Boxing support mobile and console?",
-      "The official Roblox description lists PC, Mobile and Console. Controls differ by device."
-    ],
-    [
-      "Does First Person Boxing have codes?",
-      "Dated third-party sources report redeemable codes. Read our codes page for individual strings and their unverified status; we do not claim in-game redemptions."
-    ],
-    [
-      "How do I slip and counter?",
-      "Read the opponent's attack, use a slip or appropriate guard, throw a measured response when an opening appears, and reset. The detailed drill is in our Slip & Counter Guide."
-    ],
-    [
-      "Is this the same as Untitled Boxing Game?",
-      "No. Untitled Boxing Game is a separate Roblox experience; its codes and style lists are not for First Person Boxing."
-    ]
+    {
+      "question": "Is First Person Boxing a Roblox game?",
+      "answer": "Yes. First Person Boxing is a Roblox experience by Can You Box?. Follow the official Roblox game link on this page."
+    },
+    {
+      "question": "Where can I play First Person Boxing?",
+      "answer": "Use the original Roblox experience at Place ID 132956556682909. This guide does not run the game in your browser."
+    },
+    {
+      "question": "Does First Person Boxing support mobile and console?",
+      "answer": "The official Roblox description lists PC, Mobile and Console. Controls differ by device."
+    },
+    {
+      "question": "Does First Person Boxing have codes?",
+      "answer": "Dated third-party sources report redeemable codes. Read our codes page for individual strings and their unverified status; we do not claim in-game redemptions."
+    },
+    {
+      "question": "How do I slip and counter?",
+      "answer": "Read the opponent's attack, use a slip or appropriate guard, throw a measured response when an opening appears, and reset. The detailed drill is in our Slip & Counter Guide."
+    },
+    {
+      "question": "Is this the same as Untitled Boxing Game?",
+      "answer": "No. Untitled Boxing Game is a separate Roblox experience; its codes and style lists are not for First Person Boxing."
+    }
   ],
   "screenshots": [],
   "lastReviewed": "2026-10-18"
