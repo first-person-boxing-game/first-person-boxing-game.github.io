@@ -22,7 +22,7 @@ export function CodeQuickTable() {
   return (
     <section className="fpb-reference" id="code-status">
       <h2>First Person Boxing Codes: Current Status</h2>
-      <p><strong>Source check: October 18, 2026.</strong> These four strings were published by outside sources. This site has not redeemed them in Roblox; none is labelled independently working or expired. Your game's result is authoritative.</p>
+      <p><strong>Source check: October 18, 2026.</strong> These four strings were published by outside sources. This site has not redeemed them in Roblox; none is labelled independently working or expired. Your game&apos;s result is authoritative.</p>
       <h3>Working Codes Verified in Game</h3>
       <p>No codes have been game-tested by this website. Reports of working codes are listed below with their sources and uncertainty.</p>
       <h3>Reported or Unverified Codes</h3>
