@@ -32,7 +32,7 @@ export function scopedTemplateCss(_skin: string, _accentColorId?: string | null)
     "body[data-fixed-template] .fpb-card-kicker{font-size:10px;letter-spacing:.18em;color:#9a874c}",
     "body[data-fixed-template] .page-grid{display:grid;grid-template-columns:minmax(175px,215px) minmax(0,1fr);gap:30px;padding:28px 0 48px}",
     "body[data-fixed-template] .side{border:1px solid #605333;background:#10120e;padding:18px;height:max-content;position:sticky;top:88px}",
-    "body[data-fixed-template] .side h2,body[data-fixed-template] .side h3{font:700 16px Georgia,serif;color:#d3ba70;margin:10px 0 12px}",
+    "body[data-fixed-template] .side h2,body[data-fixed-template] .side h3,body[data-fixed-template] .fpb-sidebar .fpb-sidebar-heading{font:700 16px Georgia,serif;color:#d3ba70;margin:10px 0 12px}",
     "body[data-fixed-template] .side a{display:block;padding:7px 0;color:#c4ad77;text-decoration:none;font-size:13px;line-height:1.5}",
     "body[data-fixed-template] .side a:hover{color:#fff0c1}",
     "body[data-fixed-template] .fpb-facts dt{font-size:11px;color:#a9a189;margin-top:10px}",

@@ -54,6 +54,9 @@ jobs:
             if (!existsSync(path)) throw new Error("Missing export: " + path);
             const html = readFileSync(path, "utf8");
             if (!html.includes(h1) || !/<h1[\s>]/i.test(html)) throw new Error("No expected heading: " + route);
+            const mainMarkup = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0] || "";
+            const headingOrder = [...mainMarkup.matchAll(/<h([1-6])\b[^>]*>/gi)].map((match) => Number(match[1]));
+            if (headingOrder[0] !== 1 || headingOrder.filter((level) => level === 1).length !== 1) throw new Error("Heading hierarchy: H1 must be first and unique on " + route);
             if (!html.includes('rel="canonical"') || !html.includes(origin + "/" + route)) throw new Error("Incorrect canonical: " + route);
             if (!html.includes("G-767YW0BN6E")) throw new Error("Missing preserved GA4 ID: " + route);
             if (/Yorich|立项交接|Codex|详情资料/.test(html)) throw new Error("Internal reference leaked in HTML: " + route);
@@ -110,6 +113,9 @@ jobs:
                 if (expected && !body.includes(expected)) throw new Error("missing expected content");
                 if (expectedStatus === 200 && path !== "/sitemap.xml" && path !== "/robots.txt") {
                   if (!/<h1[\s>]/i.test(body)) throw new Error("missing H1");
+                  const mainMarkup = body.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0] || "";
+                  const headingOrder = [...mainMarkup.matchAll(/<h([1-6])\b[^>]*>/gi)].map((match) => Number(match[1]));
+                  if (headingOrder[0] !== 1 || headingOrder.filter((level) => level === 1).length !== 1) throw new Error("H1 not first and unique");
                   if (!body.includes('rel="canonical"') || !body.includes(origin + path)) throw new Error("missing page canonical");
                   if (!body.includes("G-767YW0BN6E")) throw new Error("missing GA4 integration");
                   if (/Yorich|立项交接|Codex|详情资料/.test(body)) throw new Error("internal text in page HTML");

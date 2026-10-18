@@ -38,10 +38,10 @@ export function FixedTemplateInner({ page }: { page: SeoPageDefinition }) {
       <main className="wrap page-grid fpb-main-grid">
         <aside className="side fpb-sidebar">
           <p className="kicker">FIRST PERSON BOXING</p>
-          <h2>Browse guides</h2>
+          <p className="fpb-sidebar-heading">Browse guides</p>
           <Link href="/">Home / Wiki</Link>
           {visibleCorePages.map((item) => <Link href={routePath(item.slug)} key={item.slug}>{item.navLabel}</Link>)}
-          <h3>On this page</h3>
+          <p className="fpb-sidebar-heading">On this page</p>
           {page.slug === "codes" && <a href="#code-status">Current code status</a>}
           {page.slug === "styles" && <a href="#style-reports">Reported styles</a>}
           {page.sections.map((section) => <a href={"#" + section.id} key={section.id}>{section.heading}</a>)}
