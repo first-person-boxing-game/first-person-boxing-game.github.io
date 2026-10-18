@@ -1,58 +1,73 @@
-import { NativeAdSlot } from "@/components/integrations/native-ad-slot";
-import { JsonLd } from "@/components/site/json-ld";
-import { siteConfig } from "@/config/site";
-import { siteSkin } from "@/config/skin";
+import Link from "next/link";
 import type { SeoPageDefinition } from "@/config/types";
-import { enabledLegalPages, getRelatedPages, visibleCorePages } from "@/content/registry";
-import { esc, renderFixedDocument } from "@/lib/fixed-template/render";
+import { siteConfig } from "@/config/site";
+import { visibleCorePages } from "@/content/registry";
+import { JsonLd } from "@/components/site/json-ld";
+import { PageSections } from "@/components/site/page-sections";
+import { Faq } from "@/components/site/faq";
+import { RelatedPages } from "@/components/site/related-pages";
+import { getRelatedPages } from "@/content/registry";
 import { pageSchemas } from "@/lib/schema";
-import { assetPath, routePath } from "@/lib/urls";
+import { routePath } from "@/lib/urls";
+import { CodeQuickTable, StyleReportFilter } from "@/components/site/player-reference";
 
-function articleInner(page: SeoPageDefinition): string {
-  const sections = page.sections.map((section) => {
-    const paragraphs = [
-      section.intro ? `<p>${esc(section.intro)}</p>` : "",
-      ...(section.paragraphs ?? []).map((paragraph) => `<p>${esc(paragraph)}</p>`),
-    ].join("");
-    const steps = section.steps?.length
-      ? `<ol>${section.steps.map((step) => `<li><b>${esc(step.heading)}</b> ${esc(step.description)}</li>`).join("")}</ol>`
-      : "";
-    return `<section id="${esc(section.id)}"><h2>${esc(section.heading)}</h2>${paragraphs}${steps}</section>`;
-  }).join("");
-  const faq = page.faq?.length
-    ? `<section id="faq"><h2>FAQ</h2>${page.faq.map((item) => `<p><b>${esc(item.question)}</b> ${esc(item.answer)}</p>`).join("")}</section>`
-    : "";
-  const related = getRelatedPages(page);
-  const relatedHtml = related.length
-    ? `<section id="related"><h2>Related</h2><ul>${related.map((item) => `<li><a href="${esc(siteSkin() === "arcade-play" ? assetPath(routePath(item.slug)) : routePath(item.slug))}">${esc(item.navLabel)}</a></li>`).join("")}</ul></section>`
-    : "";
-  return `<p>${esc(page.hero.lead)}</p>${sections}${faq}${relatedHtml}`;
-}
+const sources: Record<string, { label: string; url: string }[]> = {
+  codes: [
+    { label: "Gamecodely — code status comparison, October 18", url: "https://gamecodely.com/first-person-boxing-codes" },
+    { label: "Pro Game Guides — First Person Boxing codes, October 15", url: "https://progameguides.com/roblox/first-person-boxing-codes/" },
+    { label: "Gamexplore — code rewards, October 18", url: "https://gamexplore.net/first-person-boxing-codes-october-2026/" }
+  ],
+  styles: [
+    { label: "AllThingsHow — reported styles and controls, October 17", url: "https://allthings.how/first-person-boxing-guide-how-to-combo-and-best-styles-roblox/" },
+    { label: "First Person Boxing Game Wiki — style fact-check context, October 17", url: "https://firstpersonboxinggame.wiki/styles/fighting-styles-list/" }
+  ],
+  controls: [
+    { label: "AllThingsHow — reported PC keybinds, October 17", url: "https://allthings.how/first-person-boxing-guide-how-to-combo-and-best-styles-roblox/" },
+    { label: "First Person Boxing Game Wiki — PC reference, October 17", url: "https://firstpersonboxinggame.wiki/platforms/game-pc/" }
+  ],
+  "slip-counter-guide": [
+    { label: "AllThingsHow — reported head movement and counters, October 17", url: "https://allthings.how/first-person-boxing-guide-how-to-combo-and-best-styles-roblox/" }
+  ]
+};
+const official = "https://www.roblox.com/games/132956556682909/First-Person-Boxing";
 
 export function FixedTemplateInner({ page }: { page: SeoPageDefinition }) {
-  const skin = siteSkin();
-  const nav = visibleCorePages
-    .filter((item) => item.slug.replace(/^\/+|\/+$/g, ""))
-    .map((item) => ({ slug: item.slug.replace(/^\/+|\/+$/g, ""), label: item.navLabel, href: routePath(item.slug) }));
-  const rendered = renderFixedDocument({
-    skin,
-    page: "inner",
-    accentColorId: siteConfig.theme.accentColorId,
-    gameName: siteConfig.game.name || siteConfig.shortName,
-    nav,
-    currentSlug: page.slug,
-    homeHref: skin === "arcade-play" ? assetPath("/") : "/",
-    logoUrl: skin === "arcade-play" ? assetPath(siteConfig.assets.logo) : null,
-    ...(skin === "arcade-play" ? { legalLinks: enabledLegalPages.map((item) => ({ slug: item.slug, label: item.navLabel, href: assetPath(routePath(item.slug)) })) } : {}),
-    heading: page.hero.heading,
-    lead: page.hero.lead,
-    articleHtml: articleInner(page),
-  });
   return (
     <>
       <JsonLd data={pageSchemas(page)} />
-      <div dangerouslySetInnerHTML={{ __html: rendered.rest }} />
-      <div className="site-container"><NativeAdSlot /></div>
+      <main className="wrap page-grid fpb-main-grid">
+        <aside className="side fpb-sidebar">
+          <p className="kicker">FIRST PERSON BOXING</p>
+          <h2>Browse guides</h2>
+          <Link href="/">Home / Wiki</Link>
+          {visibleCorePages.map((item) => <Link href={routePath(item.slug)} key={item.slug}>{item.navLabel}</Link>)}
+          <h3>On this page</h3>
+          {page.slug === "codes" && <a href="#code-status">Current code status</a>}
+          {page.slug === "styles" && <a href="#style-reports">Reported styles</a>}
+          {page.sections.map((section) => <a href={"#" + section.id} key={section.id}>{section.heading}</a>)}
+        </aside>
+        <article className="article fpb-article">
+          <nav aria-label="Breadcrumb"><Link href="/">Home</Link> › {page.navLabel}</nav>
+          <p className="kicker fpb-article-eyebrow">{page.hero.eyebrow}</p>
+          <h1>{page.hero.heading}</h1>
+          <p className="fpb-big-lead">{page.hero.lead}</p>
+          <p className="fpb-reviewed">Public sources reviewed: <time dateTime={page.lastReviewed}>{page.lastReviewed}</time>. Source review is not an in-game test.</p>
+          {page.slug === "codes" ? <CodeQuickTable /> : null}
+          {page.slug === "styles" ? <StyleReportFilter /> : null}
+          <PageSections sections={page.sections} />
+          {page.faq?.length ? <Faq items={page.faq} /> : null}
+          <section className="fpb-sources" aria-label="Sources">
+            <h2>Sources and Verification</h2>
+            <p>Official game identity and gameplay mechanics are from the Roblox experience by Can You Box?. Third-party specifics are attributed separately and may change with game updates. No direct account testing is claimed on this page.</p>
+            <ul>
+              <li><a href={official} target="_blank" rel="noopener noreferrer">Official First Person Boxing on Roblox ↗</a></li>
+              {(sources[page.slug] || []).map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}
+            </ul>
+          </section>
+          <RelatedPages pages={getRelatedPages(page)} />
+          {siteConfig.game.officialUrl && <p className="fpb-footnote"><a href={siteConfig.game.officialUrl} target="_blank" rel="noopener noreferrer">Play the correct First Person Boxing experience on Roblox ↗</a></p>}
+        </article>
+      </main>
     </>
   );
 }

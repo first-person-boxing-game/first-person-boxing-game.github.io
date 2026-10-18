@@ -1,1 +1,837 @@
-[]
+[
+  {
+    "enabled": true,
+    "slug": "codes",
+    "pageType": "codes",
+    "navLabel": "Codes",
+    "title": "First Person Boxing Codes (October 2026) – Spins",
+    "description": "Find First Person Boxing codes for Style Spins and Lucky Spins, check dated code statuses, and follow the Roblox Shop redemption steps.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "FIRST PERSON BOXING • PLAYER GUIDE",
+      "heading": "First Person Boxing Codes",
+      "lead": "Codes reported for the Roblox game First Person Boxing include LUCK1, UPPERCUT, FPSBOXING1 and FPSBOXING2. The table below labels each report; none has been redeemed by this site's editors."
+    },
+    "sections": [
+      {
+        "id": "redeem",
+        "heading": "How to Redeem First Person Boxing Codes",
+        "paragraphs": [
+          "Third-party tutorials dated October 15–18, 2026 describe a Shop redemption flow in First Person Boxing. Start by opening the correct Roblox experience by Can You Box? and, if the Shop is not available immediately, complete the initial in-game tutorial. This sequence is sourced reporting rather than a claim that our editors have tested the latest user interface.",
+          "Inside the Shop, locate the code-entry field, enter one candidate string exactly as shown, then choose the game's Redeem action. Note the game's actual success or error message before trying another entry. If you receive a reward, inspect the Spins or style interface to see what changed."
+        ],
+        "subsections": [
+          {
+            "heading": "PC Redeem Steps",
+            "paragraphs": [
+              "Dated code guides report the B keyboard shortcut for opening the Shop; if B does not match your current build, look for the visible Shop control instead. Focus the code field, paste the string without extra spaces, then activate Redeem. Do not press random keys repeatedly when the Shop fails to appear."
+            ]
+          },
+          {
+            "heading": "Mobile Redeem Steps",
+            "paragraphs": [
+              "Use Roblox on your phone or tablet, open the visible Shop interface and select its code field by touch. The reported left-side Shop button is a useful starting point, but on-screen arrangement can move after an update or when the display size changes."
+            ]
+          },
+          {
+            "heading": "After a Successful Redemption",
+            "paragraphs": [
+              "If the game confirms an accepted code, check your Spin or Lucky Spin count before spending the reward. A site showing a copied code is not proof that Roblox accepted it for your account, and existing use of a one-time code can produce a rejection."
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "heading": "Open the correct game",
+            "description": "Navigate to First Person Boxing on Roblox by Can You Box?; finish any introductory tutorial that blocks menus."
+          },
+          {
+            "heading": "Find the Shop code entry",
+            "description": "On desktop try the reported B shortcut or select Shop; on mobile use the on-screen Shop control."
+          },
+          {
+            "heading": "Paste and redeem",
+            "description": "Copy a reported string, remove extra spaces, press Redeem and look for an in-game result."
+          }
+        ],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "troubleshoot",
+        "heading": "Why a Code Does Not Work",
+        "paragraphs": [
+          "A failed redemption does not automatically mean the entire published list is fake. Possible causes include a mistyped character, a trailing space added by copying, an already-redeemed reward on that account, a temporary menu issue, or a code that has expired since an outlet checked it.",
+          "First, compare your entry character by character with the candidate table above. Next, make sure you are inside the correct game's Shop and that the current tutorial has unlocked the menu. If the same string is rejected repeatedly, stop and treat it as unconfirmed for your account rather than repeatedly submitting guesses.",
+          "The difference between a verified expiration and an untested rumor matters. Without an actual dated failed attempt, this website will not label a reported string permanently expired. You can still try it in game, but a reported code is not a promise of rewards."
+        ],
+        "subsections": [
+          {
+            "heading": "Codes for a Different Boxing Game",
+            "paragraphs": [
+              "Search engines can return Untitled Boxing Game or First-Person Boxing: Circuit Clash beside First Person Boxing. Those experiences have their own code systems. Confirm the creator Can You Box? and Roblox Place ID 132956556682909 before entering any string."
+            ]
+          },
+          {
+            "heading": "When Reports Disagree",
+            "paragraphs": [
+              "One source may call a code active while another calls it expired, especially during a fast-moving release. We label the uncertainty beside the specific code rather than announcing all reported strings as currently working."
+            ]
+          },
+          {
+            "heading": "A Safe Verification Routine",
+            "paragraphs": [
+              "Record the code, today's date, the exact Roblox experience, the message displayed after submission, and whether a reward counter changed. A clear dated result is more useful than an old screenshot with no context."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "spins",
+        "heading": "What Style Spins and Lucky Spins Do",
+        "paragraphs": [
+          "Several independent October code and guide articles describe Spins as rolls for fighting styles and distinguish regular Spins from Lucky Spins. The official Roblox game description confirms combat systems but does not publish the exact current spin economy in its public text.",
+          "If a candidate rewards a Spin, open the in-game style interface and check how many rolls you now have. Do not interpret a website's claimed rarity percentages as official odds. An apparent Lucky Spin reward tells you a type of roll was reported, not a guaranteed Mythic or Legendary pull.",
+          "Deciding when to spend a limited roll depends on your actual inventory and current options. Read the styles page for a source-labeled name list and a practical comparison checklist that avoids fabricating complete rankings."
+        ],
+        "subsections": [
+          {
+            "heading": "Use a Code for the Correct Game",
+            "paragraphs": [
+              "The fastest way to avoid wasted time is to confirm the experience and developer before you touch the Shop. If a game-looking link leads you to a separate installer, do not use it for this Roblox-only guide."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": [
+          {
+            "label": "Compare Fighting Styles",
+            "slug": "styles",
+            "description": "Reported style names and choices without unverified drop-rate guarantees"
+          }
+        ]
+      },
+      {
+        "id": "updates",
+        "heading": "Code Sources and Update Log",
+        "paragraphs": [
+          "Source review: October 18, 2026. Gamecodely reports LUCK1 and UPPERCUT active on multiple trackers, while other outlets also publish FPSBOXING1 and FPSBOXING2 with conflicting status claims. Pro Game Guides published a dated code article October 15; Gamexplore lists the expanded reward set October 18.",
+          "This website has not entered these four strings inside the Roblox game. It cannot honestly mark any one as Game-tested working, Game-tested failed or Expired based solely on other sites' tables. Until a real redemption attempt is recorded, each item is labeled Reported — not tested here.",
+          "Future edits to the code list should update the report date, the specific cited outlet and the test status only when new evidence exists. Updating a paragraph or reloading this web page is not itself a new in-game test. The same URL will continue to serve the current list without inventing separate daily code pages."
+        ],
+        "subsections": [],
+        "steps": [],
+        "table": null,
+        "links": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "What First Person Boxing codes are reported for October 2026?",
+        "answer": "Dated October sources name LUCK1, UPPERCUT, FPSBOXING1 and FPSBOXING2, with disagreements over which remain valid. None has been redeemed by our editors."
+      },
+      {
+        "question": "Are these First Person Boxing codes confirmed working?",
+        "answer": "Not by this site. The table clearly marks dated media reports, not an in-game check. Codes can change without notice."
+      },
+      {
+        "question": "How do I redeem a First Person Boxing code?",
+        "answer": "Open the official Roblox experience, complete any required tutorial, find the Shop, paste the reported code and choose Redeem. The B shortcut is reported for PC but should be checked in the current game UI."
+      },
+      {
+        "question": "Why does FPSBOXING1 fail?",
+        "answer": "Some published sources disagree about FPSBOXING1. It could be expired, already used, mistyped or temporarily unavailable; a dated in-game test is needed to classify it."
+      },
+      {
+        "question": "What do codes give?",
+        "answer": "Sources report regular Style Spins, Lucky Spins, and for one code coins. Verify the actual reward inside your game account."
+      },
+      {
+        "question": "Are Untitled Boxing Game codes the same?",
+        "answer": "No. Untitled Boxing Game is not First Person Boxing; never interchange the code lists."
+      }
+    ],
+    "relatedSlugs": [
+      "styles",
+      "controls",
+      "slip-counter-guide"
+    ],
+    "lastReviewed": "2026-10-18"
+  },
+  {
+    "enabled": true,
+    "slug": "styles",
+    "pageType": "guide",
+    "navLabel": "Styles",
+    "title": "First Person Boxing Styles – Rarities & Best Picks",
+    "description": "Explore First Person Boxing styles, Style Spins, rarity tiers and the best picks for different play styles, with clearly sourced game details.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "FIRST PERSON BOXING • PLAYER GUIDE",
+      "heading": "First Person Boxing Styles",
+      "lead": "Fighting styles are a reported progression feature of First Person Boxing. Browse the dated, source-reported examples below; no complete developer-confirmed roster or official drop-rate chart has been found."
+    },
+    "sections": [
+      {
+        "id": "all-styles",
+        "heading": "All First Person Boxing Fighting Styles",
+        "paragraphs": [
+          "The first question is which names belong to this particular Roblox experience. A dated October 17 article from AllThingsHow names Slick, Dizzy, Ghost Step, Peekaboo, Pendulum and Rope-A-Dope, while another independent wiki reports seeing Philly Shell in gameplay footage. These are media-reported examples, not a complete developer-published collection.",
+          "If your game menu shows a different set, trust the current on-screen selection. In a new game, a community article can be outdated within days, and a boxing term appearing on one site is not proof that it is selectable in this game. The filter above is an aid for comparing published claims, not a simulator of actual spin chances.",
+          "To verify a newly rolled style yourself, write down the exact spelling visible in the Styles screen and note the displayed rarity and its effect on your boxer. That in-game evidence is stronger than a ranking page that cannot cite gameplay."
+        ],
+        "subsections": [
+          {
+            "heading": "Starter, Rare, Epic, Legendary and Mythic",
+            "paragraphs": [
+              "Dated creator reporting describes these rarity labels, including Legendary and Mythic, but the developer's public Roblox description does not list the drop-rate table. This page does not assign a numerical chance to any rarity or insist that every named tier is continuously offered."
+            ]
+          },
+          {
+            "heading": "Filter Styles by Rarity",
+            "paragraphs": [
+              "Use the on-page rarity filter to narrow the names appearing in the October 17 media report. Each entry remains labeled Reported, so a selected tier does not become a game-tested fact."
+            ]
+          },
+          {
+            "heading": "Keep Game Labels Separate from Boxing Archetypes",
+            "paragraphs": [
+              "Outside boxing terminology—swarmer, out-boxer, slugger, boxer-puncher—is useful to discuss strategy, but those categories are not automatically selectable First Person Boxing styles. Likewise, Untitled Boxing Game's familiar style roster is a different game's inventory."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "getting-styles",
+        "heading": "How to Get Styles and Spins",
+        "paragraphs": [
+          "October community code guides connect the Shop's redeemable strings to Style Spins and Lucky Spins. Other coverage describes opening a Styles menu to roll your boxer into a different style. These details are useful leads, though the exact menu key and prices require confirmation in your current Roblox build.",
+          "A cautious workflow is to visit the official experience, confirm you are using the right account, read the on-screen Styles or Spins area, and decide whether to roll only after you know what you will spend. Changing a style may alter your defensive feel, so try the result in AI practice before judging it in a live fight.",
+          "Do not assume that receiving a code reward guarantees a particular high-tier style. Randomized systems can create very different results from identical numbers of rolls. Without published official odds, even a polished percentage table would be misleading."
+        ],
+        "subsections": [
+          {
+            "heading": "Style Spins vs Lucky Spins",
+            "paragraphs": [
+              "Dated third-party code trackers list both ordinary Spins and Lucky Spins as rewards. They do not establish an official probability distribution for either roll in the Roblox game description. Treat any claim that a Lucky Spin guarantees a named tier as unverified unless the game explicitly says so."
+            ]
+          },
+          {
+            "heading": "Where to Open the Styles Menu",
+            "paragraphs": [
+              "One October 17 guide reports a Y key shortcut for the Styles menu on PC. That is useful source-reported guidance, not a binding tested by this site. Read the in-game control overlay and touch-menu labels if you cannot open it."
+            ]
+          },
+          {
+            "heading": "What to Record from a Spin",
+            "paragraphs": [
+              "Capture the displayed name, rarity label and visible mechanic—ideally in your own gameplay screenshot. Compare before/after stamina behavior carefully instead of trusting an unsupported tier list."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": [
+          {
+            "label": "Check Reported Spin Codes",
+            "slug": "codes",
+            "description": "Code candidates and the Shop redemption workflow"
+          }
+        ]
+      },
+      {
+        "id": "best-picks",
+        "heading": "Best Fighting Styles for Different Players",
+        "paragraphs": [
+          "The best style for you is the one that supports the exchanges you can execute consistently. A tier list without tested matchup data cannot tell whether your timing and stamina management suit the supposed top pick. Start by comparing guard behavior, recovery, attack pacing and what happens after an unsuccessful counter.",
+          "For a beginner, prioritize a style whose defensive cues are easy to read and whose movements do not encourage long uncontrolled strings. For a counter-focused player, practice slipping or guarding one attack and returning a measured response before chasing the heaviest hit.",
+          "These recommendations are an editorial practice framework, not a claim that a specific named style guarantees wins. A visually impressive rare roll can still be a poor fit if you cannot use its rhythm under pressure."
+        ],
+        "subsections": [
+          {
+            "heading": "Best for Beginners",
+            "paragraphs": [
+              "Use the style you can control for several complete AI exchanges. Score it for readable guard posture, reliable recovery, and low-risk short attacks. Keep track of where stamina starts falling; do not reroll away a familiar option solely because an unofficial chart calls it B tier."
+            ]
+          },
+          {
+            "heading": "Best for Counter-Focused Play",
+            "paragraphs": [
+              "Test a repeatable read-slip-counter-reset sequence. Compare whether the style makes it easy to see incoming punches, preserve guard coverage and keep enough stamina to step back. Connect that test to the Slip & Counter Guide rather than relying on a name alone."
+            ]
+          },
+          {
+            "heading": "How to Compare Styles Fairly",
+            "paragraphs": [
+              "Run the same AI practice setup and the same sequence with two styles, taking notes about observed behavior rather than hidden numeric damage or rates. Player skill, camera sensitivity and opponent behavior can affect apparent power."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": [
+          {
+            "label": "Practice Slip Counters",
+            "slug": "slip-counter-guide",
+            "description": "Measure counter consistency instead of trusting a generic tier list"
+          }
+        ]
+      },
+      {
+        "id": "rarities",
+        "heading": "Style Rarities and Reported Drop Rates",
+        "paragraphs": [
+          "AllThingsHow publishes an October 17 rarity table that includes several exact percentages. Those percentages are third-party claims; we did not locate a developer-issued chart confirming them. This page intentionally does not repeat them as objective chances or claim a fixed expected number of rolls.",
+          "A single player getting a rare style quickly does not prove that everybody has the same odds. A friend obtaining another result does not disprove the category label either. Only the current game UI or an official disclosure could support a reliable public drop-rate table.",
+          "If the live Styles interface itself displays percentage odds, copy those values with a date and identify the game version before publishing them. Until then, the only safe conclusion is that community sources discuss rarity tiers, not that an exact mathematical drop rate has been verified."
+        ],
+        "subsections": [
+          {
+            "heading": "How to Interpret Unofficial Tier Lists",
+            "paragraphs": [
+              "A page with S/A/B/C headings can be a player's opinion about combat effectiveness, not developer-provided balance data. Prefer rankings with visible test methods and dates. Otherwise, choose based on how the style performs for your own timing."
+            ]
+          },
+          {
+            "heading": "Do Names Guarantee Rarities?",
+            "paragraphs": [
+              "No. The names and tiers in the filter are attributed to an outside article. Recheck in the game after updates rather than treating this snapshot as a live catalog."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "faq-update",
+        "heading": "Styles FAQ and Update Log",
+        "paragraphs": [
+          "Source review: October 18, 2026. Primary gameplay mechanics are from Roblox's First Person Boxing description. The candidate style names and labels are drawn from dated October 17 media coverage, with a separate community wiki mentioning Philly Shell.",
+          "No screenshots of this site's own rolls were available at publication. We distinguish directly verified game identity from media-reported style details, and we do not imply that the writer personally saw every style in the Styles menu.",
+          "When better evidence becomes available, add an in-game capture, date, correct Place ID and the exact visible style effect to the existing page. Avoid spawning thin duplicate URLs for every unverified style name."
+        ],
+        "subsections": [],
+        "steps": [],
+        "table": null,
+        "links": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are the best styles in First Person Boxing?",
+        "answer": "There is no complete game-tested ranking here. Compare the reported options against your guard, stamina and counter timing using the practice checklist."
+      },
+      {
+        "question": "How do I get fighting styles?",
+        "answer": "October third-party guides report rolling with Style Spins and Lucky Spins from the game's Styles interface. Check the current Roblox UI before spending a roll."
+      },
+      {
+        "question": "What is the rarest style?",
+        "answer": "Creator coverage names Legendary and Mythic as high rarity bands, but an official odds table and complete game-tested roster have not been confirmed here."
+      },
+      {
+        "question": "Can codes give Style Spins?",
+        "answer": "Dated guides report codes for spins. Visit the separate Codes page for source-labeled strings and redemption steps."
+      },
+      {
+        "question": "Does the Styles menu open with Y?",
+        "answer": "An October 17 media guide reports Y on PC; confirm the current key in the game's own controls display."
+      },
+      {
+        "question": "Is this an Untitled Boxing Game style tier list?",
+        "answer": "No. This page covers First Person Boxing by Can You Box? exclusively."
+      }
+    ],
+    "relatedSlugs": [
+      "codes",
+      "controls",
+      "slip-counter-guide"
+    ],
+    "lastReviewed": "2026-10-18"
+  },
+  {
+    "enabled": true,
+    "slug": "controls",
+    "pageType": "guide",
+    "navLabel": "Controls",
+    "title": "First Person Boxing Controls – PC, Mobile & Console",
+    "description": "Learn First Person Boxing controls for PC, mobile and console: punches, guard, slip and camera settings, with device-specific input guidance.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "FIRST PERSON BOXING • PLAYER GUIDE",
+      "heading": "First Person Boxing Controls",
+      "lead": "For First Person Boxing controls, start with movement, aiming, punching, guarding and slipping. Roblox confirms PC, mobile and console support; individual input labels below are source-reported, not personally tested across devices."
+    },
+    "sections": [
+      {
+        "id": "platforms",
+        "heading": "First Person Boxing Controls by Platform",
+        "paragraphs": [
+          "The official Roblox page confirms PC, Mobile and Console support for First Person Boxing. It does not supply a full public keybind chart. The table below combines standard platform interaction with source-reported controls, clearly separating those categories rather than presenting a speculative universal mapping.",
+          "On desktop, current October creator articles report WASD for footwork, mouse aiming, F to guard, Space plus a movement direction to slip, H for a controls overlay, and B for the Shop. One creator guide adds individual attack keybinds. These reports are a starting point; the real key prompts in your session take priority.",
+          "On mobile, guides describe touch movement and separate on-screen attack and defense buttons. Console-specific button labels cannot be reliably determined from the public listing alone. Do not substitute Xbox or PlayStation buttons from another Roblox boxing experience."
+        ],
+        "subsections": [
+          {
+            "heading": "PC Keyboard and Mouse Controls",
+            "paragraphs": [
+              "The October 17 AllThingsHow guide reports left and right mouse clicks for straight punches, WASD for movement and certain contextual attacks, F or left Shift for guard, Space plus WASD for head movement, and H for the controls overlay. It also reports X (overhand), Q (lock-on), B or K (Shop), and Y (Styles). This page has not independently tested those bindings, so open the in-game overlay before relying on them in a match."
+            ]
+          },
+          {
+            "heading": "Mobile Touch Controls",
+            "paragraphs": [
+              "The Roblox listing supports Mobile, and third-party guides describe an on-screen movement control, touch-driven camera and visible punch/guard/slip actions. Because button positions may vary with screen dimensions and updates, read the actual label and icon rather than assuming a fixed pixel location."
+            ]
+          },
+          {
+            "heading": "Console Controller Inputs",
+            "paragraphs": [
+              "Console support is a developer-listed platform, but no reliable official First Person Boxing button-by-button controller map was available in the public page. Use the current in-game controller prompts; do not blindly translate a PC modifier combination into console shoulder buttons."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": {
+          "caption": "Platform input reference — source status matters",
+          "columns": [
+            "Action",
+            "PC reported",
+            "Mobile",
+            "Console"
+          ],
+          "rows": [
+            [
+              "Move",
+              "WASD (reported)",
+              "Touch movement",
+              "Use in-game prompts"
+            ],
+            [
+              "Look / aim",
+              "Mouse (platform standard)",
+              "Touch camera",
+              "Use in-game prompts"
+            ],
+            [
+              "Straight punch",
+              "Mouse buttons (reported)",
+              "Visible punch controls",
+              "Use in-game prompts"
+            ],
+            [
+              "Guard",
+              "F / L-Shift (reported)",
+              "Visible guard controls",
+              "Use in-game prompts"
+            ],
+            [
+              "Slip / head move",
+              "Space + WASD (reported)",
+              "Visible movement / slip action",
+              "Use in-game prompts"
+            ],
+            [
+              "Controls help",
+              "H (reported)",
+              "Check on-screen UI",
+              "Check in-game UI"
+            ]
+          ]
+        },
+        "links": []
+      },
+      {
+        "id": "actions",
+        "heading": "How to Punch, Guard, Slip and Counter",
+        "paragraphs": [
+          "First Person Boxing is built around timing and protected openings, according to its official description. Start by distinguishing movement from offensive punches, and distinguish a slip from simply holding a guard. If you can identify the wrong defense in time, you are already learning more than a memorized keyboard chart provides.",
+          "A short exchange can be rehearsed in AI practice: track an incoming strike, protect its line with the appropriate guard or move your head away, answer with one measured punch if you see space, and retreat before exhaustion makes the next defense difficult.",
+          "Countering is an outcome of timing and position rather than necessarily a dedicated counter button. Do not confuse a creator's reported shortcut with proof that there is a universal automatic counter key in every game version."
+        ],
+        "subsections": [
+          {
+            "heading": "Head Guard vs Body Guard",
+            "paragraphs": [
+              "The official page confirms different guards for head and body. Identify which region an opponent is targeting and look for the corresponding in-game guard prompt. Do not assume a single input protects every height of attack."
+            ]
+          },
+          {
+            "heading": "Slip vs Block",
+            "paragraphs": [
+              "A guard meets the punch with protection; a slip attempts to move your head out of its line. Try both against AI to learn when visibility, spacing and your remaining stamina make one the safer choice."
+            ]
+          },
+          {
+            "heading": "When the Attack Does Not Fire",
+            "paragraphs": [
+              "Check whether the game window has focus, whether the fight has started and whether a menu is open. Compare against the game's live overlay. A web guide cannot override a control scheme changed by an update."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": [
+          {
+            "label": "Learn the Counter Timing Drill",
+            "slug": "slip-counter-guide",
+            "description": "Separate input setup from the read-slip-counter sequence"
+          }
+        ]
+      },
+      {
+        "id": "setup",
+        "heading": "Camera, Sensitivity and Device Setup",
+        "paragraphs": [
+          "A first-person fighter needs a reliable view of the opponent. Use small camera corrections instead of swinging the view across the entire arena. Before a serious round, set a comfortable sensitivity and test a short movement and guard sequence without losing your target.",
+          "If your inputs feel delayed, first consider frame stability, network conditions, input focus and whether your current Roblox UI differs from the published guide. Avoid interpreting every missed counter as evidence of a broken binding.",
+          "When changing devices, read the game's prompts again. A phone action represented by a visible button does not mean a keyboard key has the same position or modifier on a console controller."
+        ],
+        "subsections": [
+          {
+            "heading": "Mobile Camera Control",
+            "paragraphs": [
+              "Keep enough screen space available to move and look at once. Practice tracking an AI opponent without attacking, then introduce one punch. Your goal is a consistent view rather than exaggerated camera movement."
+            ]
+          },
+          {
+            "heading": "What If a Key Does Not Respond?",
+            "paragraphs": [
+              "Open the current controls display; close the Shop or Styles overlay; confirm Roblox has keyboard focus; and retry in practice before assuming a specific guide is universally correct. If an input works in another Roblox game but not here, it may be a game-specific binding."
+            ]
+          },
+          {
+            "heading": "Controller Layout Checks",
+            "paragraphs": [
+              "The developer confirms console access, not an immutable controller shortcut list. Use the game-side interface to map guard, attack and slip when on controller, and test each action away from a live high-pressure exchange."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "practice",
+        "heading": "First Practice Routine",
+        "paragraphs": [
+          "A five-minute self-check is better than a giant unverified control table. Spend the first minute moving and turning the camera, the second guarding head and body, the third practicing a visible slip cue, the fourth throwing a single response and the fifth resetting while observing stamina.",
+          "Write down only the key combinations that the current game screen actually confirms for you. If the controls overlay lists a shortcut that differs from the media reports above, follow the live interface. This guide cannot accurately infer a new update's key map from an old article.",
+          "Use the separate slip-counter tutorial to improve timing after movement and guard inputs are familiar. Training actions and testing conditions remain editorial advice, not developer-certified default binds."
+        ],
+        "subsections": [
+          {
+            "heading": "Quick Desktop Warmup",
+            "paragraphs": [
+              "Move, aim, open the reported H controls display if available, and identify the actual guard and slip labels. Test against AI; correct your notes if the build differs."
+            ]
+          },
+          {
+            "heading": "Quick Touch or Controller Warmup",
+            "paragraphs": [
+              "Find movement, camera, guard, slip and attack controls on the device's actual interface. Rehearse one action at a time before chaining inputs."
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "heading": "Check your control hints",
+            "description": "Use the active game's UI to see the correct controls for your platform."
+          },
+          {
+            "heading": "Practice defense",
+            "description": "Try guard and slip against an AI opponent without committing to a long flurry."
+          },
+          {
+            "heading": "Add one counter",
+            "description": "Look for a missed or guarded attack and respond once, then reset."
+          }
+        ],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "verified",
+        "heading": "FAQ and Last-Verified Controls",
+        "paragraphs": [
+          "Last public-source review: October 18, 2026. The official Roblox page confirms the supported platforms and the named mechanics; detailed PC shortcuts listed here are attributed to third-party October 17 reporting.",
+          "No firsthand PC, mobile or console input test was recorded for this site. That is why the table says reported or refers you to live prompts instead of advertising a verified button map with screenshots we do not own.",
+          "If an in-game update modifies a shortcut, preserve the underlying control categories while updating the affected reported row only when a dated screenshot or direct observation supports it."
+        ],
+        "subsections": [],
+        "steps": [],
+        "table": null,
+        "links": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are the First Person Boxing controls on PC?",
+        "answer": "October guides report WASD for movement, mouse aiming, F or left Shift for guard, and Space plus movement for slipping. Check your current in-game prompts, because these keys are not firsthand-tested here."
+      },
+      {
+        "question": "How do you block in First Person Boxing?",
+        "answer": "Use the current game's guard input and choose the correct head or body protection for the incoming punch. F is a reported PC binding."
+      },
+      {
+        "question": "How do you slip a punch?",
+        "answer": "The official game description confirms slipping. Community coverage reports Space plus a movement direction on PC; practice the current in-game action against AI."
+      },
+      {
+        "question": "Does First Person Boxing have mobile controls?",
+        "answer": "Yes, the developer lists Mobile as supported. Guides describe touch movement and on-screen combat controls, but screen layouts may differ."
+      },
+      {
+        "question": "What are the exact console controls?",
+        "answer": "The official page lists Console but does not supply a complete public button map. Read the game's active controller prompts."
+      },
+      {
+        "question": "Can I change the camera sensitivity?",
+        "answer": "Check Roblox and the game's current settings for sensitivity or camera options. Test changes in AI practice before a live match."
+      }
+    ],
+    "relatedSlugs": [
+      "slip-counter-guide",
+      "styles",
+      "codes"
+    ],
+    "lastReviewed": "2026-10-18"
+  },
+  {
+    "enabled": true,
+    "slug": "slip-counter-guide",
+    "pageType": "guide",
+    "navLabel": "Slip & Counter",
+    "title": "How to Counter in First Person Boxing – Slip Guide",
+    "description": "Learn how to counter in First Person Boxing with slip timing, guard choices, stamina-aware drills and practical ways to practice against AI opponents.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "FIRST PERSON BOXING • PLAYER GUIDE",
+      "heading": "How to Counter in First Person Boxing",
+      "lead": "To counter in First Person Boxing, read an incoming punch, slip or guard, respond during a visible opening, then reset your range. Use AI practice to repeat this safely before relying on it in PvP."
+    },
+    "sections": [
+      {
+        "id": "basics",
+        "heading": "Slip, Counter and Guard: What Each Action Does",
+        "paragraphs": [
+          "Roblox's official First Person Boxing description confirms slipping, counters, different head and body guards and stamina that affects speed. It does not announce universal invulnerability frames, hidden counter multipliers or an exact recovery duration. This guide therefore teaches decisions a player can observe instead of fabricated frame-perfect rules.",
+          "A slip aims to remove your head from an attack path. A guard covers a region in case the punch arrives. A counter is the measured offensive response after you see an opportunity. These are related actions, but success depends on reading the actual exchange rather than hitting three random inputs quickly.",
+          "Because the game uses a first-person perspective, you can lose sight of incoming pressure if you spin your camera too aggressively. Keep your opponent framed and watch for the committed strike before deciding whether to move off-line or protect yourself."
+        ],
+        "subsections": [
+          {
+            "heading": "Why Counters Follow a Read",
+            "paragraphs": [
+              "A random attack thrown before the opponent commits may trade damage instead of punishing a missed strike. Wait for a recognisable punch and choose a short response that fits the distance. This is a practice recommendation, not an official claim about a numerical bonus."
+            ]
+          },
+          {
+            "heading": "When to Guard Instead",
+            "paragraphs": [
+              "If you cannot read the punch direction, you are cornered, or stamina is nearly spent, protecting the relevant body area and creating space can be safer than guessing a slip. The official description distinguishes head and body guarding; learn both in AI practice."
+            ]
+          },
+          {
+            "heading": "Reading Stamina Before Every Exchange",
+            "paragraphs": [
+              "The Roblox description explicitly warns that fatigue slows fighters. A well-timed counter still becomes hard to follow up if you emptied your resources first. Leave enough stamina for distance and defense rather than committing the entire bar to one flurry."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "steps",
+        "heading": "How to Land a Slip Counter Step by Step",
+        "paragraphs": [
+          "Use this four-stage training loop in First Person Boxing. It makes each error diagnosable: you can ask whether you misread the punch, moved too early, struck from the wrong distance, or forgot to reset afterward.",
+          "This loop is deliberately slower than an advanced combo video. Speed comes from repeating the sequence with control, not by claiming an exact number of frames that the developer has never publicly confirmed."
+        ],
+        "subsections": [
+          {
+            "heading": "Step 1 Read the Punch",
+            "paragraphs": [
+              "Begin at a distance where the AI opponent's attack animation is visible. Keep the camera steady, wait for a committed strike and decide whether it threatens your head or body. If you cannot identify its line, choose defense rather than attacking by guesswork."
+            ]
+          },
+          {
+            "heading": "Step 2 Slip Without Losing Your Angle",
+            "paragraphs": [
+              "Move your head off the path in response to the strike, not at random from across the arena. Creator coverage from October 17 reports Space plus a WASD direction on PC, but this exact shortcut should be checked against your game's current control display. Keep the opponent in sight after the movement."
+            ]
+          },
+          {
+            "heading": "Step 3 Counter Only When You Have a Window",
+            "paragraphs": [
+              "Once the incoming punch has passed or been defended, answer with one controlled attack while you can still see the target. Do not invent a universal auto-counter button or assume that a long sequence is required; the point is timing and the ability to recover."
+            ]
+          },
+          {
+            "heading": "Step 4 Reset and Review",
+            "paragraphs": [
+              "Step back or return to guard, then note whether the attack connected and whether stamina remains. If the counter missed, repeat the drill with fewer actions and a clearer camera angle instead of adding more uncertain inputs."
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "heading": "Read",
+            "description": "Watch one incoming punch and identify its line."
+          },
+          {
+            "heading": "Slip or guard",
+            "description": "Defend with your current platform's in-game controls."
+          },
+          {
+            "heading": "Counter",
+            "description": "Throw one controlled punch when the attack line opens."
+          },
+          {
+            "heading": "Reset",
+            "description": "Leave range, check stamina and repeat the same situation."
+          }
+        ],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "ai-drills",
+        "heading": "Three Practice Drills Against AI",
+        "paragraphs": [
+          "First Person Boxing explicitly offers AI practice on its Roblox listing, making it the right environment for learning defensive timing. Use the drills as self-guided exercises: their durations and success conditions are recommendations for learning, not hardcoded game achievements.",
+          "Keep the same equipment and camera settings during several repetitions. Changing the setup constantly makes it harder to tell whether your reads improved. After a few rounds, write down which step failed most often so that the next practice session targets one weakness."
+        ],
+        "subsections": [
+          {
+            "heading": "Drill A: Read-Only Round",
+            "paragraphs": [
+              "During a short AI sequence, make no deliberate attack. Keep the opponent centered and say to yourself whether each obvious strike looks high or low. Success means recognizing attacks without losing camera control, not surviving a particular official timer."
+            ]
+          },
+          {
+            "heading": "Drill B: One-Slip Repetitions",
+            "paragraphs": [
+              "After seeing a clear incoming attack, use a single slip and then reset. Avoid chaining several dodges together. Track whether you moved too early, stepped out of viewing range, or still got hit."
+            ]
+          },
+          {
+            "heading": "Drill C: One Counter and Out",
+            "paragraphs": [
+              "Add one punch only after a successful defense. Then disengage and check stamina. This creates a repeatable test of the read-slip-counter-reset loop instead of a noisy sequence of several unmeasured attacks."
+            ]
+          },
+          {
+            "heading": "Beginner Checklist",
+            "paragraphs": [
+              "Before your next PvP match ask: Did I see the attack? Did I protect the correct area? Was my counter thrown within useful distance? Did I still have energy afterward? Repeat the one step with the weakest answer."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": [
+          {
+            "label": "See Device-Specific Controls",
+            "slug": "controls",
+            "description": "Check the reported keys and your in-game prompts before running drills"
+          }
+        ]
+      },
+      {
+        "id": "mistakes",
+        "heading": "Why Your Slip Counter Is Not Working",
+        "paragraphs": [
+          "The most common practice problem is acting without a readable opening. A slip far before a strike, a counter while facing away or a long series of punches when exhausted all make a sequence difficult to reproduce.",
+          "If your character appears slow late in an exchange, remember the game's official stamina warning. Do not treat that as proof of a specific hidden cooldown. Back off, protect yourself and observe whether responsiveness improves as you stop attacking.",
+          "If an input seems wrong, consult the controls guide and your current game UI. A correct timing strategy cannot compensate for a shortcut borrowed from another Roblox title."
+        ],
+        "subsections": [
+          {
+            "heading": "Low Stamina and Slow Movement",
+            "paragraphs": [
+              "The developer says getting tired slows you down. Spend less stamina early, use shorter replies and give yourself room to defend; no official percentage recovery rate was provided."
+            ]
+          },
+          {
+            "heading": "Slipping Every Punch without Watching",
+            "paragraphs": [
+              "Random slips are hard to judge. Pick one visible attack type to practise first and reset your position between attempts, so an improvement can be traced to something you actually changed."
+            ]
+          },
+          {
+            "heading": "Trying to Counter from Too Far Away",
+            "paragraphs": [
+              "A correct defensive read does not guarantee that a follow-up punch reaches the opponent. Rehearse distance with AI and keep your aim stable after the slip."
+            ]
+          },
+          {
+            "heading": "Ignoring Head Versus Body Guard",
+            "paragraphs": [
+              "First Person Boxing's official listing names both guard targets. If you cover the wrong line, you may still take damage even though you pressed a defense input."
+            ]
+          }
+        ],
+        "steps": [],
+        "table": null,
+        "links": []
+      },
+      {
+        "id": "scenarios",
+        "heading": "Common Fight Scenarios and FAQ",
+        "paragraphs": [
+          "Against a very aggressive opponent, prioritize seeing attacks and conserving stamina; do not match every punch with a longer barrage. Against someone who waits and counters, vary your approach rather than repeating the same obvious entry. These are general fighting-game training suggestions, not measured matchmaking probabilities.",
+          "When you miss a counter, reset instead of chasing a longer combo into bad positioning. A clean short exchange gives you feedback about timing and distance, whereas a wild flurry obscures which action created the opening.",
+          "Source review: October 18, 2026. Official Roblox description establishes the mechanisms named here. An October 17 AllThingsHow guide provides a dated PC head-movement example; we have not conducted firsthand frame analysis or measured damage multipliers in this site.",
+          "The goal is a drill you can repeat inside the correct game today. If the developer changes animation timing or input layout, prefer your current game feedback and refresh the affected example, without pretending an editorial rehearsal is an official combat formula."
+        ],
+        "subsections": [],
+        "steps": [],
+        "table": null,
+        "links": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do you counter in First Person Boxing?",
+        "answer": "Read the incoming strike, defend with a slip or guard, punch into the opening and reset your range. The official game listing confirms slip and counter mechanics, not an exact universal timing window."
+      },
+      {
+        "question": "How do you slip punches in First Person Boxing?",
+        "answer": "Practise moving your head out of a visible attack line. October media reports Space plus a direction on PC, but the current in-game prompts should determine your controls."
+      },
+      {
+        "question": "Can I practise counters against AI?",
+        "answer": "Yes. The official Roblox description explicitly offers AI practice, which works well for repeating one defensive sequence."
+      },
+      {
+        "question": "Does a counter have a guaranteed damage multiplier?",
+        "answer": "No developer-published counter multiplier was verified for this guide. Do not rely on unsubstantiated precise values."
+      },
+      {
+        "question": "Should I slip or block?",
+        "answer": "A slip attempts to evade a readable attack; guarding covers the threatened head or body when slipping is risky. Practice deciding between them against AI."
+      },
+      {
+        "question": "Why is my character slow after an exchange?",
+        "answer": "The developer says low stamina slows you down. Reset and conserve stamina instead of guessing hidden recovery numbers."
+      }
+    ],
+    "relatedSlugs": [
+      "controls",
+      "styles",
+      "codes"
+    ],
+    "lastReviewed": "2026-10-18"
+  }
+]

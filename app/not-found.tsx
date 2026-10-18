@@ -1,10 +1,9 @@
-import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
-  description: "The requested game wiki page is not available.",
+  description: "The requested First Person Boxing page could not be found.",
   robots: { index: false, follow: false },
 };
 
@@ -13,11 +12,11 @@ export default function NotFound() {
     <main className="site-container grid min-h-[65vh] place-items-center py-20 text-center">
       <div>
         <p className="eyebrow">404 · Page not found</p>
-        <h1>This Guide Is Not Available</h1>
+        <h1>This Page Does Not Exist</h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-          The page may be disabled, renamed or waiting to be added to the content registry.
+          The link may be outdated or the page may have moved. Explore the current First Person Boxing guides instead.
         </p>
-        <Link href="/" className="button-primary mt-8"><ArrowLeft size={18} />Return to the wiki</Link>
+        <Link href="/" className="button-primary mt-8">Back to First Person Boxing Wiki</Link>
       </div>
     </main>
   );

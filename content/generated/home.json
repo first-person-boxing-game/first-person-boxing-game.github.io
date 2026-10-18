@@ -2,29 +2,271 @@
   "enabled": true,
   "slug": "",
   "pageType": "home",
-  "title": "First Person Boxing Guide",
-  "description": "Guides, walkthroughs, tips, updates, and reference information for First Person Boxing.",
+  "title": "First Person Boxing Wiki – Codes, Styles & Controls",
+  "description": "First Person Boxing Roblox wiki with codes, fighting styles, controls and slip-counter guides. Find the correct game, learn the basics and explore guides.",
   "navVisible": true,
   "hero": {
-    "eyebrow": "Game guide",
-    "heading": "First Person Boxing",
-    "lead": "Guides, walkthroughs, tips, updates, and reference information for First Person Boxing.",
-    "supportingText": "Browse current game information and practical guides.",
+    "eyebrow": "ROBLOX • CAN YOU BOX? • INDEPENDENT GUIDE",
+    "heading": "First Person Boxing Wiki",
+    "lead": "First Person Boxing is a first-person Roblox boxing game where you slip punches, guard your head or body, counter, and manage stamina in player fights or AI practice.",
+    "supportingText": "Play the official First Person Boxing experience by Can You Box? on Roblox. Start with one of the four focused guides below; this independent wiki does not host or impersonate the game.",
+    "primaryLink": {
+      "label": "Find First Person Boxing Codes",
+      "slug": "codes"
+    },
     "secondaryLink": {
-      "label": "Open official game page",
-      "url": "https://www.roblox.com/games/132956556682909"
+      "label": "Play First Person Boxing on Roblox",
+      "url": "https://www.roblox.com/games/132956556682909/First-Person-Boxing"
     }
   },
   "sections": [
     {
-      "id": "start-here",
-      "heading": "Game information",
+      "id": "official-game",
+      "heading": "First Person Boxing on Roblox: Official Game & Fast Facts",
       "paragraphs": [
-        "Current First Person Boxing guides and reference information will be published here."
+        "The correct First Person Boxing experience is published by Can You Box? on Roblox. Use the official game link above, rather than similarly titled downloads or other boxing games. The official Place ID is 132956556682909; the separate Universe ID is not a substitute for a playable Place link.",
+        "The Roblox description identifies the main appeal directly: see each attack from a first-person viewpoint, slip a punch, answer with a counter, choose a guard for the threatened area, and avoid becoming exhausted. That is a better introduction than an invented tier list or unverified win-rate chart.",
+        "Game identity and supported-platform details were checked against the public Roblox listing on October 18, 2026. Player counts move quickly, so this guide deliberately does not publish a supposedly live online-player figure."
+      ],
+      "subsections": [
+        {
+          "heading": "Which Roblox Experience Is the Correct One?",
+          "paragraphs": [
+            "Look for the experience named First Person Boxing and the creator Can You Box?. The approved link points to Roblox Place 132956556682909. Untitled Boxing Game and First-Person Boxing: Circuit Clash are different experiences; their codes and controls must not be mixed with this game."
+          ]
+        },
+        {
+          "heading": "Can You Play on PC, Mobile and Console?",
+          "paragraphs": [
+            "Yes: the official First Person Boxing description explicitly lists PC, Mobile and Console. That statement confirms the offered platforms, not identical keyboard, touch and controller bindings. Consult the controls guide for a device-specific reference and how to inspect the current in-game prompts."
+          ]
+        }
+      ],
+      "steps": [],
+      "table": {
+        "caption": "Officially supported First Person Boxing facts",
+        "columns": [
+          "Item",
+          "Detail"
+        ],
+        "rows": [
+          [
+            "Experience",
+            "First Person Boxing"
+          ],
+          [
+            "Developer",
+            "Can You Box?"
+          ],
+          [
+            "Platform",
+            "Roblox — PC, Mobile, Console"
+          ],
+          [
+            "Correct Place ID",
+            "132956556682909"
+          ],
+          [
+            "Modes described",
+            "Player fights and AI practice"
+          ],
+          [
+            "Core systems",
+            "Slip, counter, head/body guard, stamina, knockdown replay"
+          ]
+        ]
+      },
+      "links": []
+    },
+    {
+      "id": "gameplay",
+      "heading": "What You Do in First Person Boxing",
+      "paragraphs": [
+        "A fight is not simply a race to press attack. The official description highlights a sequence of decisions: judge an incoming strike, defend the right target or move out of the punch line, respond with a counter when an opening appears, then recover your position.",
+        "The first-person camera makes reading distance important. Try to keep your opponent in view and make one deliberate decision per exchange before adding faster attacks. This is practice advice, not a claim about hidden damage multipliers or exact frame timings."
+      ],
+      "subsections": [
+        {
+          "heading": "Offense, Defense and Stamina",
+          "paragraphs": [
+            "Offense means choosing when to throw. Defense includes two guard targets—head and body—and a slip to evade a strike. Stamina is a limited resource; the official listing warns that tired fighters slow down. If your movement feels less responsive after repeated actions, create distance rather than assuming that a longer button sequence is always better."
+          ]
+        },
+        {
+          "heading": "AI Practice Versus Fighting Other Players",
+          "paragraphs": [
+            "The Roblox description explicitly offers AI practice alongside fighting players. AI is a useful place to rehearse a repeatable defense sequence without relying on an opponent to cooperate. Actual PvP opponents change their rhythm, so a drill that works against AI remains a starting point rather than a guaranteed winning move."
+          ]
+        }
+      ],
+      "steps": [],
+      "table": {
+        "caption": "The combat features mentioned on Roblox",
+        "columns": [
+          "Feature",
+          "Player question",
+          "Learn more"
+        ],
+        "rows": [
+          [
+            "Slip punches",
+            "How do I evade instead of absorbing a punch?",
+            "Slip & Counter Guide"
+          ],
+          [
+            "Head and body guards",
+            "Which attack line do I protect?",
+            "Controls"
+          ],
+          [
+            "Counters",
+            "When do I attack after defending?",
+            "Slip & Counter Guide"
+          ],
+          [
+            "Stamina",
+            "Why does a tired boxer feel slower?",
+            "Slip & Counter Guide"
+          ],
+          [
+            "Knockdowns & replay",
+            "Does the game show dramatic knockdowns?",
+            "Official description"
+          ]
+        ]
+      },
+      "links": []
+    },
+    {
+      "id": "find-guide",
+      "heading": "Find the Guide You Need",
+      "paragraphs": [
+        "Choose one task at a time. The home page identifies the game and its combat systems; each linked page provides a more detailed answer without repeating an entire separate guide. All four links lead to independent, crawlable articles on this site."
+      ],
+      "subsections": [
+        {
+          "heading": "Codes and Free Spins",
+          "paragraphs": [
+            "Looking for rewards? The code page lists the exact strings reported by dated third-party outlets and explicitly separates those reports from codes redeemed in this site's own testing. It also explains where to look for the Shop input and why a code may fail."
+          ]
+        },
+        {
+          "heading": "Fighting Styles and Spins",
+          "paragraphs": [
+            "Looking for a style to roll? The styles guide distinguishes the confirmed existence of spin-based styles from source-reported names, proposed rarities and unverified drop-rate percentages. Use its reported-name filter as a lead, then verify the current in-game menu."
+          ]
+        },
+        {
+          "heading": "Controls and Slip Counters",
+          "paragraphs": [
+            "Need a button? Start with controls. Need a defensive sequence? Use the slip-counter guide. Mixing a platform's action inputs with a combat-timing question often leads to incorrect advice; these pages deliberately separate those tasks."
+          ]
+        }
+      ],
+      "steps": [],
+      "table": null,
+      "links": [
+        {
+          "label": "First Person Boxing Codes",
+          "slug": "codes",
+          "description": "Reported codes, copy buttons, rewards, and redemption troubleshooting"
+        },
+        {
+          "label": "First Person Boxing Styles",
+          "slug": "styles",
+          "description": "Reported style names, rarity context and a usable style comparison"
+        },
+        {
+          "label": "First Person Boxing Controls",
+          "slug": "controls",
+          "description": "PC, touch and console input guidance with source labels"
+        },
+        {
+          "label": "Slip & Counter Guide",
+          "slug": "slip-counter-guide",
+          "description": "A four-stage defense-and-counter practice routine"
+        }
       ]
+    },
+    {
+      "id": "first-round",
+      "heading": "Beginner Path: Your First AI Practice Round",
+      "paragraphs": [
+        "Open the official Roblox experience and identify the movement, attack, defense and camera prompts for your device before jumping into a live match. A useful first round is not about winning instantly. It is about learning what the screen tells you when you are about to be hit.",
+        "For the first few exchanges, focus on the opponent's movement and the visible stamina state. Practice a guard without rushing to attack, then attempt one deliberate slip. Only after those inputs are familiar should you try to place a short counter.",
+        "Repeat the sequence against AI until you can reliably describe what happened: which punch you saw, which defense you chose, whether your response connected, and whether you still had stamina to leave safely."
+      ],
+      "subsections": [
+        {
+          "heading": "Common First-Match Mistakes",
+          "paragraphs": [
+            "Do not import keybinds, reward codes or style names from another Roblox boxing game. Do not assume every player-facing input on desktop will be available as the same key on mobile or console. When a code or key behaves differently after an update, rely on the current game interface rather than a copied old list."
+          ]
+        },
+        {
+          "heading": "A Repeatable Five-Minute Routine",
+          "paragraphs": [
+            "Spend the first minute checking inputs; the second keeping the opponent centered; the third alternating guard choices; the fourth testing slips on clearly visible attacks; and the fifth performing one measured counter before resetting. These durations are suggested training structure, not official game rules."
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "heading": "Open the official experience",
+          "description": "Confirm the creator Can You Box? and choose AI practice if it is available in your session."
+        },
+        {
+          "heading": "Read your current controls",
+          "description": "Use the in-game on-screen prompts or controls display to learn the actual input bindings."
+        },
+        {
+          "heading": "Defend, then answer",
+          "description": "Protect the correct line, attempt a deliberate slip, counter once, and reset your distance."
+        }
+      ],
+      "table": null,
+      "links": []
+    },
+    {
+      "id": "sources",
+      "heading": "Sources and Update Notes",
+      "paragraphs": [
+        "Primary game identity and mechanics source: the First Person Boxing listing on Roblox by Can You Box? (reviewed October 18, 2026). It describes slipping, head and body guards, counters, stamina, knockdown replays, PvP, AI, and PC/Mobile/Console support.",
+        "The dedicated codes, styles and controls pages identify their third-party reporting sources and distinguish a report from direct in-game validation. This site is an independent player reference, not a developer news channel or a game download service.",
+        "Our content review date records when publicly available claims were read, not a claim that we logged in and tested every input on every supported platform. Date-sensitive information can change after publication; follow the original Roblox experience for the latest game state."
+      ],
+      "subsections": [],
+      "steps": [],
+      "table": null,
+      "links": []
     }
   ],
-  "faq": [],
+  "faq": [
+    [
+      "Is First Person Boxing a Roblox game?",
+      "Yes. First Person Boxing is a Roblox experience by Can You Box?. Follow the official Roblox game link on this page."
+    ],
+    [
+      "Where can I play First Person Boxing?",
+      "Use the original Roblox experience at Place ID 132956556682909. This guide does not run the game in your browser."
+    ],
+    [
+      "Does First Person Boxing support mobile and console?",
+      "The official Roblox description lists PC, Mobile and Console. Controls differ by device."
+    ],
+    [
+      "Does First Person Boxing have codes?",
+      "Dated third-party sources report redeemable codes. Read our codes page for individual strings and their unverified status; we do not claim in-game redemptions."
+    ],
+    [
+      "How do I slip and counter?",
+      "Read the opponent's attack, use a slip or appropriate guard, throw a measured response when an opening appears, and reset. The detailed drill is in our Slip & Counter Guide."
+    ],
+    [
+      "Is this the same as Untitled Boxing Game?",
+      "No. Untitled Boxing Game is a separate Roblox experience; its codes and style lists are not for First Person Boxing."
+    ]
+  ],
   "screenshots": [],
   "lastReviewed": "2026-10-18"
 }

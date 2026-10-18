@@ -1,11 +1,11 @@
 {
-  "readyForLaunch": false,
-  "siteName": "First Person Boxing Guide",
+  "readyForLaunch": true,
+  "siteName": "First Person Boxing Wiki",
   "shortName": "First Person Boxing",
-  "description": "First Person Boxing guides, walkthroughs, tips, updates, and reference information.",
+  "description": "Independent First Person Boxing Roblox guides, codes, fighting styles, controls, and slip-counter training.",
   "language": "en",
   "locale": "en_US",
-  "authorName": "Editorial Team",
+  "authorName": "First Person Boxing Wiki Editors",
   "theme": {
     "preset": "obsidian-red",
     "overrides": {
@@ -54,11 +54,11 @@
   "game": {
     "name": "First Person Boxing",
     "platform": "Roblox",
-    "developer": "",
-    "genre": "",
-    "officialUrl": "https://www.roblox.com/games/132956556682909"
+    "developer": "Can You Box?",
+    "genre": "First-person boxing / PvP fighting",
+    "officialUrl": "https://www.roblox.com/games/132956556682909/First-Person-Boxing"
   },
   "seo": {
-    "titleTemplate": "%s | First Person Boxing Guide"
+    "titleTemplate": "%s"
   }
 }

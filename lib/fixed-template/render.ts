@@ -1,181 +1,67 @@
-import { accentOverrideCss, resolveAccent, templatePack, type TemplatePack, type TemplateSkin } from "./catalog";
-import { SPEC_HTML } from "./spec-html";
-
-export interface TemplateLink { slug: string; label: string; href: string; }
-export interface TemplateEntry { href: string; title: string; text: string; }
-export interface FixedTemplateInput {
-  preview?: boolean;
-  legalLinks?: TemplateLink[];
-  skin: TemplateSkin | string; page: "home" | "inner"; accentColorId?: string | null; gameName: string;
-  nav: TemplateLink[]; currentSlug?: string | null; homeHref: string; logoUrl?: string | null; bannerUrl?: string | null;
-  heading?: string | null; lead?: string | null; articleHtml?: string | null; entries?: TemplateEntry[] | null; supplementHtml?: string | null;
+/* Styles for the existing dark gold Guidebook skin. The site keeps its original theme and template selection. */
+export function scopedTemplateCss(_skin: string, _accentColorId?: string | null): string {
+  return [
+    "body[data-fixed-template]{background:#0e100c;color:#ddd3b7;background-image:radial-gradient(circle at 50% 0,#a5833530,transparent 35%),linear-gradient(30deg,#ffffff05 12%,transparent 12.5%,transparent 87%,#ffffff05 87.5%);font-family:'Source Sans 3',Arial,sans-serif}",
+    "body[data-fixed-template] .wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}",
+    "body[data-fixed-template] .top{background:#080a07;color:#eadba7;border-bottom:1px solid #6d5e35}",
+    "body[data-fixed-template] .top-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}",
+    "body[data-fixed-template] .brand{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none;color:#ead895;font-weight:800;font-family:Georgia,serif;letter-spacing:.035em}",
+    "body[data-fixed-template] .site-nav{display:flex;align-items:center;gap:6px}",
+    "body[data-fixed-template] .site-nav a{padding:12px 8px;font:bold 12px Georgia,serif;color:#c6b88f;text-decoration:none;border-bottom:2px solid transparent}",
+    "body[data-fixed-template] .site-nav a[aria-current=page],body[data-fixed-template] .site-nav a:hover{color:#f4e4a8;border-bottom-color:#c6a54f}",
+    "body[data-fixed-template] .fpb-brand-logo{height:37px;width:37px;object-fit:cover;border-radius:5px}",
+    "body[data-fixed-template] .hero{padding:42px 0 28px;background-image:radial-gradient(circle at 70% 10%,#a583351a,transparent 60%)}",
+    "body[data-fixed-template] .hero-grid{display:grid;grid-template-columns:1fr .88fr;gap:34px;align-items:center}",
+    "body[data-fixed-template] .hero h1,body[data-fixed-template] .fpb-article h1{font:700 clamp(36px,5.2vw,59px)/1.1 Georgia,'Times New Roman',serif;color:#ead895;margin:10px 0 18px}",
+    "body[data-fixed-template] .kicker{color:#c5ae69;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:11px}",
+    "body[data-fixed-template] .goldline{height:1px;background:linear-gradient(90deg,#c4a452,transparent);margin:18px 0}",
+    "body[data-fixed-template] .hero p{line-height:1.75;color:#c8c1ad}",
+    "body[data-fixed-template] .fpb-big-lead{font-size:clamp(1.08rem,2.1vw,1.33rem);color:#f1e7ce!important;line-height:1.65!important}",
+    "body[data-fixed-template] .cover{overflow:hidden;border:1px solid #7e6a39;box-shadow:0 30px 70px #000}",
+    "body[data-fixed-template] .fpb-cover-image{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}",
+    "body[data-fixed-template] .fpb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}",
+    "body[data-fixed-template] .fpb-primary-cta,body[data-fixed-template] .fpb-secondary-cta{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:10px 18px;border:1px solid #bf9f51;font-weight:800;font-size:14px;text-decoration:none}",
+    "body[data-fixed-template] .fpb-primary-cta{background:#c8ae58;color:#15140f}",
+    "body[data-fixed-template] .fpb-secondary-cta{background:#17180f;color:#f2dfab}",
+    "body[data-fixed-template] .fpb-identity{margin-top:20px;font-size:11px;letter-spacing:.07em;color:#cab675}",
+    "body[data-fixed-template] .fpb-quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:15px;margin-bottom:20px}",
+    "body[data-fixed-template] .fpb-quick-card{display:flex;flex-direction:column;gap:9px;border:1px solid #665837;background:#11160f;padding:17px;text-decoration:none;min-height:170px}",
+    "body[data-fixed-template] .fpb-quick-card strong{font:700 1.25rem Georgia,serif;color:#edd99e}",
+    "body[data-fixed-template] .fpb-quick-card small{line-height:1.5;color:#c4bea9}",
+    "body[data-fixed-template] .fpb-quick-card span:last-child{margin-top:auto;font-size:12px;font-weight:700;color:#e8cb75}",
+    "body[data-fixed-template] .fpb-card-kicker{font-size:10px;letter-spacing:.18em;color:#9a874c}",
+    "body[data-fixed-template] .page-grid{display:grid;grid-template-columns:minmax(175px,215px) minmax(0,1fr);gap:30px;padding:28px 0 48px}",
+    "body[data-fixed-template] .side{border:1px solid #605333;background:#10120e;padding:18px;height:max-content;position:sticky;top:88px}",
+    "body[data-fixed-template] .side h2,body[data-fixed-template] .side h3{font:700 16px Georgia,serif;color:#d3ba70;margin:10px 0 12px}",
+    "body[data-fixed-template] .side a{display:block;padding:7px 0;color:#c4ad77;text-decoration:none;font-size:13px;line-height:1.5}",
+    "body[data-fixed-template] .side a:hover{color:#fff0c1}",
+    "body[data-fixed-template] .fpb-facts dt{font-size:11px;color:#a9a189;margin-top:10px}",
+    "body[data-fixed-template] .fpb-facts dd{font-size:13px;font-weight:700;margin:2px 0 6px;color:#e5d8b3;overflow-wrap:anywhere}",
+    "body[data-fixed-template] .fpb-article{border-left:1px solid #625633;padding-left:29px;min-width:0}",
+    "body[data-fixed-template] .fpb-article h2{font:700 clamp(22px,3vw,30px) Georgia,serif;color:#e2cf91;margin:10px 0 18px}",
+    "body[data-fixed-template] .fpb-article h3{font:700 1.2rem Georgia,serif;color:#edd69a;margin:8px 0 12px}",
+    "body[data-fixed-template] .fpb-article p,body[data-fixed-template] .fpb-article li{line-height:1.8;color:#cfc8b5;overflow-wrap:anywhere}",
+    "body[data-fixed-template] .fpb-article section{scroll-margin-top:90px}",
+    "body[data-fixed-template] .fpb-article .content-card{background:#191a12;border-color:#65552e;padding:18px}",
+    "body[data-fixed-template] .fpb-article a{color:#ead082}",
+    "body[data-fixed-template] .fpb-article nav{margin-bottom:20px;font-size:13px;color:#b7a571}",
+    "body[data-fixed-template] .fpb-article-eyebrow{margin-top:14px}",
+    "body[data-fixed-template] .fpb-reviewed,body[data-fixed-template] .fpb-footnote{font-size:12px;opacity:.92}",
+    "body[data-fixed-template] .fpb-reference{margin:30px 0 50px;padding:22px;border:1px solid #77673b;background:#171a12}",
+    "body[data-fixed-template] .fpb-table-scroll{overflow-x:auto;margin:15px 0}",
+    "body[data-fixed-template] .fpb-reference-table{width:100%;border-collapse:collapse;min-width:570px;font-size:13px;text-align:left}",
+    "body[data-fixed-template] .fpb-reference-table caption{caption-side:top;text-align:left;padding:8px;color:#c5b381}",
+    "body[data-fixed-template] .fpb-reference-table th,body[data-fixed-template] .fpb-reference-table td{padding:12px;border-bottom:1px solid #584c2d;vertical-align:top}",
+    "body[data-fixed-template] .fpb-reference-table th{color:#e9d39b}",
+    "body[data-fixed-template] .fpb-copy-button{border:1px solid #c1a55f;color:#fff0c8;padding:5px 12px;white-space:nowrap}",
+    "body[data-fixed-template] .fpb-filter-label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}",
+    "body[data-fixed-template] .fpb-filter{background:#10120e;border:1px solid #c0a35b;color:#f4e6c2;padding:10px;max-width:100%}",
+    "body[data-fixed-template] .fpb-sources{margin-top:52px;border-top:1px solid #77653b;padding-top:18px}",
+    "body[data-fixed-template] .fpb-sources ul{padding-left:21px;list-style:disc}",
+    "body[data-fixed-template] .fpb-mobile-toggle{display:none;color:#e5cc88;padding:8px;border:1px solid #816b38}",
+    "body[data-fixed-template] .fpb-mobile-links{display:none;padding:8px 16px 16px;background:#080a07}",
+    "body[data-fixed-template] .fpb-mobile-links a{display:block;padding:12px;border-bottom:1px solid #51452b;color:#e8d49d}",
+    "@media(max-width:820px){body[data-fixed-template] .site-nav{display:none}body[data-fixed-template] .fpb-mobile-toggle{display:block}body[data-fixed-template] .fpb-mobile-links.is-open{display:grid}body[data-fixed-template] .fpb-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-fixed-template] .hero-grid,body[data-fixed-template] .page-grid{grid-template-columns:1fr}body[data-fixed-template] .side{position:static}body[data-fixed-template] .fpb-article{border-left:0;padding-left:0}body[data-fixed-template] .hero{padding-top:26px}}",
+    "@media(max-width:520px){body[data-fixed-template] .fpb-quick-grid{grid-template-columns:1fr 1fr;gap:8px}body[data-fixed-template] .fpb-quick-card{padding:12px;min-height:175px}body[data-fixed-template] .brand strong{font-size:12px}}"
+  ].join("\n");
 }
-
-export function esc(value: string): string { return value.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-function safeAttr(value: string) { return esc(value).replace(/'/g,"&#39;"); }
-function slugOnly(value: string) { return value.replace(/^\/+|\/+$/g, ""); }
-
-export function templateNavLinks(nav: TemplateLink[], page: "home" | "inner", currentSlug?: string | null): string {
-  return nav.filter((item)=>slugOnly(item.slug)).map((item)=>{
-    const active = page === "inner" && currentSlug && slugOnly(item.slug) === slugOnly(currentSlug);
-    return `<a class="nav-link${active ? " active" : ""}" data-nav href="${safeAttr(item.href)}">${esc(item.label)}</a>`;
-  }).join("");
-}
-
-function firstLetter(gameName: string) { return esc((gameName.trim()[0] || "G").toUpperCase()); }
-function logoMarkup(input: FixedTemplateInput) {
-  return input.logoUrl
-    ? `<img class="brand-logo" alt="" src="${safeAttr(input.logoUrl)}">`
-    : `<span class="brand-logo logo-fallback" aria-hidden="true">${firstLetter(input.gameName)}</span>`;
-}
-function brandMarkup(input: FixedTemplateInput) { return `${logoMarkup(input)}<strong>${esc(input.gameName)}</strong>`; }
-
-function replaceBrand(html: string, input: FixedTemplateInput): string {
-  let changed = false;
-  let next = html.replace(/<a class="([^"]*\b(?:brand|logo)\b[^"]*)"[^>]*>[\s\S]*?<\/a>/, (_m, cls:string)=>{
-    changed = true; return `<a class="${cls}" href="${safeAttr(input.homeHref)}" aria-label="Back to homepage">${brandMarkup(input)}</a>`;
-  });
-  next = next.replace(/<span class="brand-logo">[\s\S]*?<\/span>/g, logoMarkup(input));
-  if (!changed) next = next.replace(/<div class="task">[\s\S]*?<\/div>/, `<a class="task" href="${safeAttr(input.homeHref)}" aria-label="Back to homepage">${esc(input.gameName)}</a>`);
-  return next;
-}
-
-function replaceNav(html: string, links: string): string {
-  const patterns = [
-    /<nav class="([^"]*site-nav[^"]*)"[^>]*>[\s\S]*?<\/nav>/,
-    /<nav class="(nav)"[^>]*>[\s\S]*?<\/nav>/,
-    /<div class="(nav)">[\s\S]*?<\/div>/,
-  ];
-  for (const pattern of patterns) {
-    if (!pattern.test(html)) continue;
-    return html.replace(pattern, (full, cls: string) => (
-      full.startsWith("<div")
-        ? `<div class="${cls}">${links}</div>`
-        : `<nav class="${cls}">${links}</nav>`
-    ));
-  }
-  return html;
-}
-
-function replaceCrumbs(html: string, homeHref: string, current: string | null): string {
-  const body = current ? `<a href="${safeAttr(homeHref)}">Home</a> › ${esc(current)}` : `<a href="${safeAttr(homeHref)}">Home</a>`;
-  return html.replace(/<div class="site-breadcrumb">[\s\S]*?<\/div>/g,`<div class="site-breadcrumb">${body}</div>`).replace(/<div class="crumb">[\s\S]*?<\/div>/g,`<div class="crumb">${body}</div>`);
-}
-
-function injectTemplateAssets(html: string, input: FixedTemplateInput): string {
-  let next = html.replace(/<(?:p|span)[^>]*data-nav-status[^>]*>[\s\S]*?<\/(?:p|span)>/g, "");
-  if (input.bannerUrl) {
-    const banner = `<img class="template-banner-image" alt="" src="${safeAttr(input.bannerUrl)}">`;
-    next = next.replace(/(<(?:div|aside|article)[^>]*class="[^"]*(?:cover-own|hero-cover|hero-art|cover-card|\bcover\b|\bvisual\b)[^"]*"[^>]*>)/, `$1${banner}`);
-  }
-  return next.replace("</style>", `\n.brand-logo{width:36px;height:36px;object-fit:cover;display:inline-grid;place-items:center;vertical-align:middle}.template-banner-image{width:100%;height:100%;min-height:180px;object-fit:cover;display:block}.template-banner-image~svg{display:none!important}.template-page-list{display:grid;gap:8px;margin:12px 0}.template-page-link{display:block;padding:9px 10px;border:1px solid currentColor;text-decoration:none;opacity:.9}\n</style>`);
-}
-
-function replaceFactsWithEntries(html: string, entries: TemplateEntry[] | null | undefined): string {
-  if (!entries?.length) return html;
-  const list = `<div class="template-page-list">${entries.slice(0,8).map(e=>`<a class="template-page-link" href="${safeAttr(e.href)}"><b>${esc(e.title)}</b></a>`).join("")}</div>`;
-  return html.replace(/<table class="facts">[\s\S]*?<\/table>/g, list);
-}
-
-function replaceBalanced(html: string, tag: string, className: string, inner: string): string {
-  const marker = `<${tag} class="${className}">`; const start = html.indexOf(marker); if (start < 0) return html;
-  const openEnd = start + marker.length; const closer = `</${tag}>`; let depth=1,index=openEnd;
-  while(index<html.length&&depth>0){const no=html.indexOf(`<${tag}`,index),nc=html.indexOf(closer,index);if(nc<0)return html;if(no!==-1&&no<nc){depth++;index=no+tag.length+1}else{depth--;if(depth===0)return html.slice(0,openEnd)+inner+html.slice(nc);index=nc+closer.length}}
-  return html;
-}
-function applyEntries(html: string, skin: string, entries: TemplateEntry[]): string {
-  const cards = entries.slice(0,8).map((entry,index)=>{
-    const title=esc(entry.title), text=esc(entry.text), href=safeAttr(entry.href);
-    if(skin==="portal")return `<a class="card" href="${href}"><div class="icon">${index+1}</div><h3>${title}</h3><p>${text}</p></a>`;
-    if(skin==="wiki")return `<a class="row" href="${href}"><b>${title}</b><span>${text}</span></a>`;
-    if(skin==="resource")return `<a class="quick" href="${href}"><b>${title}</b><span>${text}</span></a>`;
-    if(skin==="editorial")return `<article class="article"><a href="${href}"><div class="thumb"></div><div class="article-body"><h3>${title}</h3><p>${text}</p></div></a></article>`;
-    if(skin==="glass")return `<a class="block" href="${href}"><div class="num">0${index+1}</div><b>${title}</b><p>${text}</p></a>`;
-    if(skin==="pixel")return `<a class="tile" href="${href}"><div class="icon">▣</div><b>${title}</b><p>${text}</p></a>`;
-    if(skin==="horror")return `<article class="card"><a href="${href}"><div class="tag">GUIDE</div><h3>${title}</h3><p>${text}</p></a></article>`;
-    return "";
-  }).join("");
-  if(!cards)return html;
-  if(skin==="portal")return replaceBalanced(html,"div","grid",cards);
-  if(skin==="wiki")return replaceBalanced(html,"div","list",cards);
-  if(skin==="resource")return replaceBalanced(html,"div","quick-grid",cards);
-  if(skin==="editorial")return replaceBalanced(html,"section","grid",cards);
-  if(skin==="glass")return replaceBalanced(html,"div","blocks",cards);
-  if(skin==="pixel")return replaceBalanced(html,"div","tiles",cards);
-  if(skin==="horror")return replaceBalanced(html,"div","cards",cards);
-  return html;
-}
-
-function neutralizeDemoCopy(html: string, input: FixedTemplateInput): string {
-  const lead = esc(input.lead || `${input.gameName} guides, walkthroughs, reference information, and quick answers for players.`);
-  let next=html;
-  const replacements:[RegExp,string][]=[
-    [/What Drag(?:&#x27;|')n Wash Is/g,`About ${esc(input.gameName)}`],
-    [/Drag(?:&#x27;|')n Wash is an adult-only dragon wash simulation from Gator Dragon Games\.[\s\S]*?three endings\./g,lead],
-    [/This hub routes you to beginner progress,[\s\S]*?itch\.io\./g,`Use the navigation above to open the guides and reference pages in this site.`],
-    [/Drag(?:&#x27;|')n Wash \(also styled DragN'Wash\)[\s\S]*?open-world exploration\./g,`${esc(input.gameName)} is covered here with player-focused guides and reference information.`],
-    [/Sessions are short by design\.[\s\S]*?Linux\./g,`Use each guide for a focused player task, then follow related pages for deeper coverage.`],
-    [/Ryan, Alexander and Conrad/gi,"Characters and game systems"],
-    [/Three Endings/gi,"Game Guides"],[/3 Routes/gi,"Guide Routes"],[/ENDINGS/g,"GUIDES"],
-    [/Steam \/ itch\.io/gi,"Official platforms"],[/September 10, 2026/gi,"Official release"],[/Gator Dragon Games/gi,"Official developer"],
-  ];
-  for(const [pattern,value] of replacements)next=next.replace(pattern,value);
-  next=next.replaceAll("Drag'n Wash",input.gameName).replaceAll("Drag&#x27;n Wash",esc(input.gameName)).replaceAll("DragN'Wash",input.gameName);
-  return next;
-}
-
-function applyCopy(html: string, input: FixedTemplateInput): string {
-  let next=neutralizeDemoCopy(html,input);
-  if(input.heading)next=next.replace(/<h1>[\s\S]*?<\/h1>/,`<h1>${esc(input.heading)}</h1>`);
-  if(input.lead){ if(next.includes('<p class="lead">'))next=next.replace(/<p class="lead">[\s\S]*?<\/p>/,`<p class="lead">${esc(input.lead)}</p>`); }
-  return next;
-}
-
-export function extractStyle(html:string):string{return [...html.matchAll(/<style>([\s\S]*?)<\/style>/g)].map(m=>m[1]??"").join("\n")}
-export function extractBody(html:string):string{const m=html.match(/<body[^>]*>([\s\S]*)<\/body>/i);return(m?.[1]??html).replace(/<script[\s\S]*?<\/script>/g,"")}
-function deriveInnerTemplate(home:string,pack:TemplatePack):string{
-  const style=extractStyle(home); const fg=pack.dark?"#F4F4F5":"#1F2937", muted=pack.dark?"#A1A1AA":"#667085";
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Game Guide</title><style>${style}\n:root{--accent:${pack.defaultAccent}}body{background:${pack.background};color:${fg}}.template-inner-header{position:relative;z-index:10;border-bottom:1px solid color-mix(in srgb,${fg} 18%,transparent)}.template-inner-row{width:min(1120px,calc(100% - 32px));min-height:68px;margin:auto;display:flex;align-items:center;gap:20px}.template-inner-row .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}.template-inner-row .site-nav{margin-left:auto;display:flex;flex-wrap:wrap;gap:6px}.template-inner-row .nav-link{padding:9px 11px;text-decoration:none;color:${muted}}.template-inner-row .nav-link.active{color:inherit;box-shadow:inset 0 -2px 0 var(--accent)}.template-inner-main{width:min(980px,calc(100% - 32px));margin:auto;padding:34px 0 54px}.site-breadcrumb{font-size:12px;color:${muted};margin-bottom:22px}.site-breadcrumb a{color:var(--accent)}.template-inner-article h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;margin:0 0 18px}.template-inner-article h2{margin-top:38px}.template-inner-article p,.template-inner-article li{line-height:1.78;color:${muted}}.template-inner-footer{border-top:1px solid color-mix(in srgb,${fg} 18%,transparent);padding:30px 0}.template-inner-footer>div{width:min(1120px,calc(100% - 32px));margin:auto;color:${muted};font-size:13px}@media(max-width:760px){.template-inner-row .site-nav{display:none}}</style></head><body data-template="${pack.specId.replace(/^\d+-/,"")}"><header class="template-inner-header"><div class="template-inner-row"><a class="brand" href="home.html" aria-label="Back to homepage"><strong>Game</strong></a><nav class="site-nav"><a class="nav-link" href="inner.html#guide">Guide</a></nav></div></header><main class="template-inner-main"><div class="site-breadcrumb"><a href="home.html">Home</a> › Guide</div><article class="template-inner-article"><h1>Game Guide</h1><p class="lead">Player guide and reference page.</p><section id="guide"><h2>Guide</h2><p>Guide content.</p></section></article></main><footer class="template-inner-footer"><div>Independent player guide</div></footer></body></html>`;
-}
-function templateSource(skin:string,page:"home"|"inner"){const pack=templatePack(skin),source=SPEC_HTML[pack.specId];if(!source?.home)throw new Error(`Missing approved HTML for ${pack.specId} home`);return{pack,html:page==="home"?source.home:(source.inner||deriveInnerTemplate(source.home,pack))}}
-
-function replaceArticleBody(html:string,articleHtml:string):string{
-  const match=html.match(/<article([^>]*)class="([^"]*template-inner-article[^"]*)"([^>]*)>[\s\S]*?<\/article>/) || html.match(/<article([^>]*)>[\s\S]*?<\/article>/);
-  if(!match)return html; const full=match[0]; const attrs=full.match(/^<article([^>]*)>/)?.[1]??""; const h1=full.match(/<h1>[\s\S]*?<\/h1>/)?.[0]??"";
-  return html.replace(full,`<article${attrs}>${h1}${articleHtml}</article>`);
-}
-function insertSupplement(html:string,supplement:string){if(html.includes("</main>"))return html.replace("</main>",`${supplement}</main>`);if(html.includes("<footer"))return html.replace("<footer",`${supplement}<footer`);return html.replace("</body>",`${supplement}</body>`)}
-
-export function renderFixedTemplate(input:FixedTemplateInput):string{
-  const {pack,html:source}=templateSource(input.skin,input.page); const paint=resolveAccent(pack.skin,input.accentColorId);
-  const currentLabel=input.page==="inner"?(input.nav.find(x=>slugOnly(x.slug)===slugOnly(input.currentSlug||""))?.label||input.heading||"Guide"):null;
-  let html=source;
-  html=replaceBrand(html,input);
-  html=html.replaceAll('href="home.html"',`href="${safeAttr(input.homeHref)}"`);
-  html=replaceNav(html,templateNavLinks(input.nav,input.page,input.currentSlug));
-  html=replaceCrumbs(html,input.homeHref,currentLabel);
-  html=html.replace(/href="inner\.html#([^"]+)"/g,(_m: string, id: string)=>{const linked=input.nav.find(x=>slugOnly(x.slug)===id);return`href="${safeAttr(linked?.href||`#${id}`)}"`});
-  html=injectTemplateAssets(html,input);
-  if(input.page==="home"&&input.entries?.length){html=applyEntries(html,pack.skin,input.entries);html=replaceFactsWithEntries(html,input.entries)}
-  if(input.page==="inner"&&input.articleHtml)html=replaceArticleBody(html,input.articleHtml);
-  if(input.supplementHtml)html=insertSupplement(html,input.supplementHtml);
-  html=applyCopy(html,input);
-  html=html.replace(/--accent:#[0-9A-Fa-f]{6}/,`--accent:${paint.textAccent}`);
-  html=html.replace("</style>",`${accentOverrideCss(pack.skin,paint)}</style>`);
-  if(!/<body[^>]*data-template=/.test(html))html=html.replace(/<body([^>]*)>/,`<body$1 data-template="${pack.specId.replace(/^\d+-/,"")}">`);
-  return html;
-}
-
-function balancedFirstElement(body:string,marker:string,tag:string){const start=body.indexOf(marker);if(start<0)return"";const openEnd=body.indexOf(">",start)+1, closer=`</${tag}>`;let depth=1,index=openEnd;while(index<body.length&&depth){const no=body.indexOf(`<${tag}`,index),nc=body.indexOf(closer,index);if(nc<0)return"";if(no!==-1&&no<nc){depth++;index=no+tag.length+1}else{depth--;index=nc+closer.length}}return body.slice(start,index)}
-export function splitFixedChrome(body:string,_skin:string):{chrome:string;rest:string}{const source=body.trim();let chrome="";if(source.startsWith('<div class="topline">')){const end=source.indexOf("</header>");if(end>=0)chrome=source.slice(0,end+9)}else if(source.startsWith('<nav class="floating">')){chrome=balancedFirstElement(source,'<nav class="floating">',"nav")}else if(source.startsWith('<div class="desktopbar">')){chrome=balancedFirstElement(source,'<div class="desktopbar">',"div")}else{const hs=source.indexOf("<header"),he=source.indexOf("</header>");if(hs>=0&&he>=0)chrome=source.slice(hs,he+9)}return{chrome,rest:chrome?source.replace(chrome,""):source}}
-
-function scopeSelectorList(selector:string,scope:string){return selector.split(",").map(part=>{const sel=part.trim();if(!sel||sel.startsWith("@"))return sel;if(sel===":root"||sel==="html"||sel==="body")return scope;return`${scope} ${sel}`}).join(",")}
-export function scopeTemplateCss(css:string,scope:string):string{
-  let source=css.replace(/@import[^;]+;/g,"").trim(),index=0,out=""; while(index<source.length){while(/[\s]/.test(source[index]||""))index++;if(index>=source.length)break;
-    if(source.startsWith("@media",index)||source.startsWith("@supports",index)){const brace=source.indexOf("{",index);if(brace<0)break;const header=source.slice(index,brace+1);let depth=1,cursor=brace+1;while(cursor<source.length&&depth){if(source[cursor]==="{")depth++;else if(source[cursor]==="}")depth--;cursor++}out+=header+scopeTemplateCss(source.slice(brace+1,cursor-1),scope)+"}";index=cursor;continue}
-    if(source.startsWith("@keyframes",index)||source.startsWith("@font-face",index)){const brace=source.indexOf("{",index);if(brace<0)break;let depth=1,cursor=brace+1;while(cursor<source.length&&depth){if(source[cursor]==="{")depth++;else if(source[cursor]==="}")depth--;cursor++}out+=source.slice(index,cursor);index=cursor;continue}
-    const brace=source.indexOf("{",index);if(brace<0)break;const selector=source.slice(index,brace).trim(),close=source.indexOf("}",brace);if(close<0)break;out+=scopeSelectorList(selector,scope)+"{"+source.slice(brace+1,close)+"}";index=close+1;
-  }return out;
-}
-export function scopedTemplateCss(skin:string,accentColorId?:string|null):string{const {pack,html:home}=templateSource(skin,"home"),{html:inner}=templateSource(skin,"inner"),paint=resolveAccent(pack.skin,accentColorId);const raw=extractStyle(home)+"\\n"+extractStyle(inner)+"\\n"+accentOverrideCss(pack.skin,paint);return scopeTemplateCss(raw,`body[data-fixed-template="${pack.skin}"]`)}
-export function renderFixedDocument(input:FixedTemplateInput):{html:string;body:string;chrome:string;rest:string}{const html=renderFixedTemplate(input),body=extractBody(html),parts=splitFixedChrome(body,templatePack(input.skin).skin);return{html,body,...parts}}
