@@ -68,7 +68,7 @@ export function StyleReportFilter() {
       </select>
       <div className="fpb-table-scroll">
         <table className="fpb-reference-table">
-          <caption>Media-reported examples; validate names in your game's Styles menu</caption>
+          <caption>Media-reported examples; validate names in your game&apos;s Styles menu</caption>
           <thead><tr><th scope="col">Reported style</th><th scope="col">Reported rarity</th><th scope="col">Attribution</th></tr></thead>
           <tbody>{filtered.map((item) => <tr key={item.name}><th scope="row">{item.name}</th><td>{item.rarity}</td><td>{item.source}</td></tr>)}</tbody>
         </table>
