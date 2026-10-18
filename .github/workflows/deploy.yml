@@ -37,6 +37,37 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
+      - name: Validate exported SEO pages
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from "node:fs";
+          const origin = "https://first-person-boxing-game.github.io";
+          const pages = [
+            ["", "First Person Boxing Wiki"],
+            ["codes/", "First Person Boxing Codes"],
+            ["styles/", "First Person Boxing Styles"],
+            ["controls/", "First Person Boxing Controls"],
+            ["slip-counter-guide/", "How to Counter in First Person Boxing"]
+          ];
+          for (const [route, h1] of pages) {
+            const path = route ? "out/" + route + "index.html" : "out/index.html";
+            if (!existsSync(path)) throw new Error("Missing export: " + path);
+            const html = readFileSync(path, "utf8");
+            if (!html.includes(h1) || !/<h1[\s>]/i.test(html)) throw new Error("No expected heading: " + route);
+            if (!html.includes('rel="canonical"') || !html.includes(origin + "/" + route)) throw new Error("Incorrect canonical: " + route);
+            if (!html.includes("G-767YW0BN6E")) throw new Error("Missing preserved GA4 ID: " + route);
+            if (/Yorich|立项交接|Codex|详情资料/.test(html)) throw new Error("Internal reference leaked in HTML: " + route);
+            console.log("PASS export", "/" + route);
+          }
+          const sitemap = readFileSync("out/sitemap.xml", "utf8");
+          const robots = readFileSync("out/robots.txt", "utf8");
+          for (const [route] of pages) {
+            if (!sitemap.includes(origin + "/" + route)) throw new Error("Sitemap missing " + route);
+          }
+          if (!/User-agent:\s*\*/i.test(robots) || !/Allow:\s*\//i.test(robots) || !robots.includes("sitemap.xml")) throw new Error("Robots rules unexpected");
+          if (!existsSync("out/404.html")) throw new Error("Missing 404");
+          console.log("PASS exported SEO assets and indexable routes");
+          NODE
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -52,3 +83,48 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Verify published HTML and crawl endpoints
+        run: |
+          node --input-type=module <<'NODE'
+          const origin = "https://first-person-boxing-game.github.io";
+          const pages = [
+            ["/", "First Person Boxing Wiki"],
+            ["/codes/", "First Person Boxing Codes"],
+            ["/styles/", "First Person Boxing Styles"],
+            ["/controls/", "First Person Boxing Controls"],
+            ["/slip-counter-guide/", "How to Counter in First Person Boxing"]
+          ];
+          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          async function check(path, expected, expectedStatus = 200) {
+            let last = "";
+            for (let attempt = 1; attempt <= 12; attempt++) {
+              try {
+                const response = await fetch(origin + path + (path.includes("?") ? "&" : "?") + "qa=" + process.env.GITHUB_SHA, { signal: AbortSignal.timeout(18000), redirect: "follow" });
+                const body = await response.text();
+                if (response.status !== expectedStatus) throw new Error("HTTP " + response.status);
+                if (expected && !body.includes(expected)) throw new Error("missing expected content");
+                if (expectedStatus === 200 && path !== "/sitemap.xml" && path !== "/robots.txt") {
+                  if (!/<h1[\s>]/i.test(body)) throw new Error("missing H1");
+                  if (!body.includes('rel="canonical"') || !body.includes(origin + path)) throw new Error("missing page canonical");
+                  if (!body.includes("G-767YW0BN6E")) throw new Error("missing GA4 integration");
+                  if (/Yorich|立项交接|Codex|详情资料/.test(body)) throw new Error("internal text in page HTML");
+                }
+                console.log("PASS live", path, response.status, body.length, "bytes");
+                return;
+              } catch (error) {
+                last = String(error);
+                if (attempt < 12) await sleep(7000);
+              }
+            }
+            throw new Error("Failed live URL " + path + ": " + last);
+          }
+          for (const [path, heading] of pages) await check(path, heading);
+          await check("/sitemap.xml", "https://first-person-boxing-game.github.io/codes/");
+          await check("/robots.txt", "sitemap.xml");
+          await check("/__this-page-does-not-exist__", null, 404);
+          NODE
