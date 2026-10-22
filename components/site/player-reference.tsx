@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 import { useState } from "react";
 
 const codes = [
@@ -9,7 +11,7 @@ const codes = [
   { code: "FPSBOXING2", reward: "1,000 coins + 3 Spins", source: "Gamexplore • Oct 18", status: "Limited report; not game-tested here" }
 ];
 
-export function CodeQuickTable() {
+export function CodeQuickTable({ afterIntro }: { afterIntro?: ReactNode }) {
   const [copied, setCopied] = useState("");
   async function copyCode(code: string) {
     try {
@@ -23,6 +25,7 @@ export function CodeQuickTable() {
     <section className="fpb-reference" id="code-status">
       <h2>First Person Boxing Codes: Current Status</h2>
       <p><strong>Source check: October 18, 2026.</strong> These four strings were published by outside sources. This site has not redeemed them in Roblox; none is labelled independently working or expired. Your game&apos;s result is authoritative.</p>
+      {afterIntro}
       <h3>Working Codes Verified in Game</h3>
       <p>No codes have been game-tested by this website. Reports of working codes are listed below with their sources and uncertainty.</p>
       <h3>Reported or Unverified Codes</h3>
@@ -55,13 +58,14 @@ const styles = [
   { name: "Philly Shell", rarity: "Not independently established", source: "First Person Boxing Game Wiki • Oct 17" }
 ];
 
-export function StyleReportFilter() {
+export function StyleReportFilter({ afterIntro }: { afterIntro?: ReactNode }) {
   const [tier, setTier] = useState("All reported tiers");
   const filtered = styles.filter((item) => tier === "All reported tiers" || item.rarity === tier);
   return (
     <section className="fpb-reference" id="style-reports">
       <h2>Reported Fighting Styles — Source-Labeled List</h2>
       <p>These are names published by third-party articles dated October 17, 2026, <strong>not</strong> a complete developer-confirmed list. Rarity labels are reported, not verified against the live game menu. We do not publish unsupported drop rates or a fictional S-tier ranking.</p>
+      {afterIntro}
       <label className="fpb-filter-label" htmlFor="style-tier">Filter reported rarity</label>
       <select id="style-tier" value={tier} onChange={(event) => setTier(event.target.value)} className="fpb-filter">
         {["All reported tiers","Epic","Legendary","Mythic","Not independently established"].map((value) => <option key={value} value={value}>{value}</option>)}

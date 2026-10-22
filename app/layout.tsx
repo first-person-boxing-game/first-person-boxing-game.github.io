@@ -1,3 +1,4 @@
+import { SocialBarAd } from "@/components/integrations/social-bar-ad";
 import type { CSSProperties, ReactNode } from "react";
 import { Analytics } from "@/components/integrations/analytics";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <SiteHeader links={navLinks} />
         <div id="main-content">{children}</div>
         <SiteFooter coreLinks={navLinks} legalLinks={legalLinks} />
+        <SocialBarAd />
       </body>
     </html>
   );

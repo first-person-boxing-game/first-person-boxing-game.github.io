@@ -1,3 +1,5 @@
+import { ResponsiveBannerAd } from "@/components/integrations/responsive-banner-ad";
+import { NativeAdSlot } from "@/components/integrations/native-ad-slot";
 import Link from "next/link";
 import type { HomePageDefinition } from "@/config/types";
 import { siteConfig } from "@/config/site";
@@ -33,6 +35,7 @@ export function FixedTemplateHome({ home }: { home: HomePageDefinition }) {
             </div>
           </div>
         </section>
+        <div className="wrap"><ResponsiveBannerAd /></div>
         <div className="wrap fpb-quick-grid" aria-label="Find a guide">
           {visibleCorePages.map((page) => (
             <Link key={page.slug} className="fpb-quick-card" href={routePath(page.slug)}>
@@ -43,6 +46,7 @@ export function FixedTemplateHome({ home }: { home: HomePageDefinition }) {
             </Link>
           ))}
         </div>
+        <div className="wrap"><NativeAdSlot /></div>
         <div className="wrap page-grid fpb-main-grid">
           <aside className="side">
             <h2>Verified Game Identity</h2>

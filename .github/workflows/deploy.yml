@@ -22,8 +22,6 @@ jobs:
       NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
       NEXT_PUBLIC_CUSTOM_DOMAIN: ${{ vars.NEXT_PUBLIC_CUSTOM_DOMAIN }}
       NEXT_PUBLIC_THEME_PRESET: ${{ vars.NEXT_PUBLIC_THEME_PRESET }}
-      NEXT_PUBLIC_ADSTERRA_NATIVE_SCRIPT_URL: ${{ secrets.NEXT_PUBLIC_ADSTERRA_NATIVE_SCRIPT_URL }}
-      NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER_ID: ${{ secrets.NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER_ID }}
       BING_SITE_VERIFICATION: ${{ secrets.BING_SITE_VERIFICATION }}
     steps:
       - uses: actions/checkout@v4
@@ -57,6 +55,15 @@ jobs:
             const mainMarkup = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0] || "";
             const headingOrder = [...mainMarkup.matchAll(/<h([1-6])\b[^>]*>/gi)].map((match) => Number(match[1]));
             if (headingOrder[0] !== 1 || headingOrder.filter((level) => level === 1).length !== 1) throw new Error("Heading hierarchy: H1 must be first and unique on " + route);
+            // Ads must follow the existing first H1/hero, once each, with real content between.
+            const bannerIndex = mainMarkup.indexOf("data-adsterra-responsive-banner");
+            const nativeIndex = mainMarkup.indexOf("data-adsterra-native-slot");
+            const h1Index = mainMarkup.indexOf("<h1");
+            if (bannerIndex < 0 || nativeIndex < 0 || !(h1Index < bannerIndex && bannerIndex < nativeIndex)) throw new Error("Incorrect ad order: " + route);
+            if ((mainMarkup.match(/data-adsterra-responsive-banner/g) || []).length !== 1) throw new Error("Banner count != 1: " + route);
+            if ((mainMarkup.match(/data-adsterra-native-slot/g) || []).length !== 1) throw new Error("Native count != 1: " + route);
+            const readableBetween = mainMarkup.slice(bannerIndex, nativeIndex).replace(/<[^>]*>/g, " ").trim();
+            if (readableBetween.length < 50) throw new Error("No meaningful content between banner and native: " + route);
             if (!html.includes('rel="canonical"') || !html.includes(origin + "/" + route)) throw new Error("Incorrect canonical: " + route);
             if (!html.includes("G-767YW0BN6E")) throw new Error("Missing preserved GA4 ID: " + route);
             if (/Yorich|立项交接|Codex|详情资料/.test(html)) throw new Error("Internal reference leaked in HTML: " + route);
@@ -116,6 +123,11 @@ jobs:
                   const mainMarkup = body.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)?.[0] || "";
                   const headingOrder = [...mainMarkup.matchAll(/<h([1-6])\b[^>]*>/gi)].map((match) => Number(match[1]));
                   if (headingOrder[0] !== 1 || headingOrder.filter((level) => level === 1).length !== 1) throw new Error("H1 not first and unique");
+                  const bannerIndex = mainMarkup.indexOf("data-adsterra-responsive-banner");
+                  const nativeIndex = mainMarkup.indexOf("data-adsterra-native-slot");
+                  if (bannerIndex < 0 || nativeIndex < 0 || !(mainMarkup.indexOf("<h1") < bannerIndex && bannerIndex < nativeIndex)) throw new Error("Incorrect ad placement");
+                  if ((mainMarkup.match(/data-adsterra-responsive-banner/g) || []).length !== 1) throw new Error("Duplicate or missing banner");
+                  if ((mainMarkup.match(/data-adsterra-native-slot/g) || []).length !== 1) throw new Error("Duplicate or missing native");
                   if (!body.includes('rel="canonical"') || !body.includes(origin + path)) throw new Error("missing page canonical");
                   if (!body.includes("G-767YW0BN6E")) throw new Error("missing GA4 integration");
                   if (/Yorich|立项交接|Codex|详情资料/.test(body)) throw new Error("internal text in page HTML");

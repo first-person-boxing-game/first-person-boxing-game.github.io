@@ -7,23 +7,25 @@ export function NativeAdClient({ scriptUrl, containerId }: { scriptUrl: string; 
 
   useEffect(() => {
     const host = hostRef.current;
-    if (!host) return;
+    if (!host || host.querySelector("script[data-adsterra-native-script]")) return;
+
+    // One ad unit per mounted page. The official script attributes, URL and
+    // destination container ID are preserved exactly.
+    const script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-cfasync", "false");
+    script.setAttribute("data-adsterra-native-script", "");
+    script.src = scriptUrl;
 
     const container = document.createElement("div");
     container.id = containerId;
-    host.appendChild(container);
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = scriptUrl;
-    script.dataset.cfasync = "false";
-    script.dataset.gameWikiNativeAd = containerId;
-    host.insertBefore(script, container);
+    host.append(script, container);
 
     return () => {
+      script.remove();
       host.replaceChildren();
     };
   }, [containerId, scriptUrl]);
 
-  return <div ref={hostRef} data-native-ad-slot />;
+  return <div ref={hostRef} data-adsterra-native-slot />;
 }

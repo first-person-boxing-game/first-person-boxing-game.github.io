@@ -1,6 +1,13 @@
 /* Styles for the existing dark gold Guidebook skin. The site keeps its original theme and template selection. */
 export function scopedTemplateCss(_skin: string, _accentColorId?: string | null): string {
   return [
+    ".fpb-ad-shell{margin:18px auto 24px;max-width:100%;min-width:0;overflow:hidden;text-align:center;isolation:isolate}",
+    ".fpb-ad-label{font:500 10px/1.4 Arial,sans-serif!important;letter-spacing:.09em;text-transform:uppercase;color:#afa385!important;margin:0 0 5px!important}",
+    ".fpb-banner-reserve{min-height:90px;display:flex;justify-content:center;align-items:flex-start;max-width:100%;overflow:hidden}",
+    ".fpb-banner-frame{display:block;border:0;max-width:100%;flex:none;background:transparent}",
+    ".fpb-native-shell{clear:both;text-align:center;margin-top:20px;margin-bottom:32px;max-width:100%;overflow:hidden}",
+    ".fpb-native-shell [data-adsterra-native-slot]{max-width:100%;overflow:hidden}",
+    "@media(max-width:767px){.fpb-banner-reserve{min-height:50px}.fpb-ad-shell{margin-top:14px;margin-bottom:18px}}",
     "body[data-fixed-template]{background:#0e100c;color:#ddd3b7;background-image:radial-gradient(circle at 50% 0,#a5833530,transparent 35%),linear-gradient(30deg,#ffffff05 12%,transparent 12.5%,transparent 87%,#ffffff05 87.5%);font-family:'Source Sans 3',Arial,sans-serif}",
     "body[data-fixed-template] .wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}",
     "body[data-fixed-template] .top{background:#080a07;color:#eadba7;border-bottom:1px solid #6d5e35}",

@@ -1,3 +1,5 @@
+import { ResponsiveBannerAd } from "@/components/integrations/responsive-banner-ad";
+import { NativeAdSlot } from "@/components/integrations/native-ad-slot";
 import Link from "next/link";
 import type { SeoPageDefinition } from "@/config/types";
 import { siteConfig } from "@/config/site";
@@ -52,9 +54,10 @@ export function FixedTemplateInner({ page }: { page: SeoPageDefinition }) {
           <h1>{page.hero.heading}</h1>
           <p className="fpb-big-lead">{page.hero.lead}</p>
           <p className="fpb-reviewed">Public sources reviewed: <time dateTime={page.lastReviewed}>{page.lastReviewed}</time>. Source review is not an in-game test.</p>
-          {page.slug === "codes" ? <CodeQuickTable /> : null}
-          {page.slug === "styles" ? <StyleReportFilter /> : null}
-          <PageSections sections={page.sections} />
+          <ResponsiveBannerAd />
+          {page.slug === "codes" ? <CodeQuickTable afterIntro={<NativeAdSlot />} /> : null}
+          {page.slug === "styles" ? <StyleReportFilter afterIntro={<NativeAdSlot />} /> : null}
+          <PageSections sections={page.sections} afterFirstParagraphAd={page.slug === "codes" || page.slug === "styles" ? undefined : <NativeAdSlot />} />
           {page.faq?.length ? <Faq items={page.faq} /> : null}
           <section className="fpb-sources" aria-label="Sources">
             <h2>Sources and Verification</h2>
