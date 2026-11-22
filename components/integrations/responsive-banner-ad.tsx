@@ -38,7 +38,8 @@ export function ResponsiveBannerAd() {
             srcDoc={iframeDocument(code)}
             scrolling="no"
             loading="lazy"
-            sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+            // No sandbox: a sandboxed srcdoc frame gets an opaque origin, so Adsterra cannot
+            // see which site requests the banner and serves nothing. srcdoc keeps the site origin.
             referrerPolicy="strict-origin-when-cross-origin"
             className="fpb-banner-frame"
           />
